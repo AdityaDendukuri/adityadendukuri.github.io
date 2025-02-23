@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  <meta charset="UTF-8" />
+  <title>Aditya Dendukuri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Basic reset and body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    /* Top navigation bar */
+    nav {
+      background-color: #ffffff;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #000; /* a bold horizontal rule effect */
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    nav li {
+      display: inline;
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0000EE; /* link color */
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main container to center the content and set max width */
+    .container {
+      max-width: 800px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Logo styling */
+    .logo-container {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .logo-container img {
+      max-width: 375px;
+      height: auto;
+      display: block;
+      margin: 0 auto 0.5rem;
+    }
+    .logo-container h1 {
+      font-size: 1.6rem;
+      margin: 0.5rem 0;
+    }
+
+    /* Contact and info section */
+    .info {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Links list (CV, students, etc.) */
+    .links-list {
+      line-height: 1.8;
+    }
+    .links-list a {
+      color: #0000EE;
+      text-decoration: none;
+    }
+    .links-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="https://scholar.google.com/citations?user=CLWuJj8AAAAJ&hl=en&authuser=1">Research</a></li>
+      <li><a href="#">Teaching</a></li>
+      <li><a href="#">Hiking</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    <div class="logo-container">
+      <!-- Replace the src with your actual logo file or path -->
+      <img src="images/me.png"/>
+    </div>
+
+    <!-- Personal Info -->
+    <div class="info">
+      <p><strong>Aditya Dendukuri</strong><br />
+      PhD Candidate<br />
+      Department of Computer Science<br />
+      University of California, Santa Barbara</p>
+      <p>
+        E-mail: aditya_dendukuri [at] ucsb [dot] edu
+      </p>
+    </div>
+
+    <!-- Links and Other Details -->
+    <div class="links-list">
+      <p><a href="aditya_dendukuri_cv.pdf">CV</a></p>
+      <p><a href="https://github.com/AdityaDendukuri">Github</a></p>
+      <p><a href="https://www.linkedin.com/in/adityadendukuri/">Linkedin</a></p>
+      <p>
+       <b><u> Research Interests: </u></b><br />
+        Applied Mathematics/Scientific Computing, Data Science, Stochastic Modelling and Simulation.
+      </p>
+      <p>
+       <b><u> Current Projects: </u></b><br />
+       1. <b>Efficient Stochastic Simulation Methods for Discrete Systems</b><br />
+        My research focuses on developing efficient algorithms for the stochastic simulation of discrete systems, particularly biochemical reaction networks. These networks are inherently random, and their dynamics are governed by the Chemical Master Equation (CME):
+        \[ \frac{dP(\mathbf{x},t)}{dt} = \sum_{\mathbf{x}'\neq\mathbf{x}} \Bigl[W_{\mathbf{x}'\to\mathbf{x}}\,P(\mathbf{x}',t) - W_{\mathbf{x}\to\mathbf{x}'}\,P(\mathbf{x},t)\Bigr] \]
+        For example, the genetic toggle switch—two mutually repressing genes—is modeled by reactions such as:
+        \[ \varnothing \xrightarrow{\frac{\beta_A}{1+(B/K_B)^{n_B}}} A,\; A \xrightarrow{\delta_A} \varnothing \quad \text{and} \quad \varnothing \xrightarrow{\frac{\beta_B}{1+(A/K_A)^{n_A}}} B,\; B \xrightarrow{\delta_B} \varnothing \]
+        <img src="anim_fps15.gif" alt="Toggle Switch Simulation" style="max-width:700px;"> This GIF shows how stochastic fluctuations drive the system between states. To handle the exploding state space, we employ the Finite State Projection (FSP) method, which truncates the CME to a finite set of states. The FSP formulation partitions the transition-rate matrix as:
+        \[ \mathbf{W} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{T} & \mathbf{U} \end{pmatrix} \quad \text{approximated by} \quad \widetilde{\mathbf{W}} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{0} & \mathbf{0} \end{pmatrix} \]
+      </p>
+      My speficic research boils down to finding methods to control the finite state space of the system in time. 
+      <p>
+
+        1. <b>Markov Simulation of Nucleation (Crystal Formation)</b>
+        <img src="output.gif" alt="Toggle Switch Simulation" style="max-width:1000px;">
+      </p>
+
+  </div>
+
+</body>
+</html>
