@@ -93,7 +93,7 @@
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="https://scholar.google.com/citations?user=CLWuJj8AAAAJ&hl=en&authuser=1">Research</a></li>
-      <li><a href="#">Teaching</a></li>
+      <li><a href="teaching/index.html">TA Stuff</a></li>
       <li><a href="figures/index.html">Hiking</a></li>
     </ul>
   </nav>
@@ -105,43 +105,64 @@
       <img src="images/me.png"/>
     </div>
 
-    <!-- Personal Info -->
-    <div class="info">
-      <p><strong>Aditya Dendukuri</strong><br />
-      PhD Candidate<br />
-      Department of Computer Science<br />
-      University of California, Santa Barbara</p>
-      <p>
-        E-mail: aditya_dendukuri [at] ucsb [dot] edu
-      </p>
+   <div class="info">
+  <p><strong>Aditya Dendukuri</strong><br />
+  PhD Candidate<br />
+  Department of Computer Science<br />
+  University of California, Santa Barbara</p>
+  <p>
+    E-mail: aditya_dendukuri [at] ucsb [dot] edu
+  </p>
+</div>
+
+<!-- Links and Other Details -->
+<div class="links-list">
+  <p><a href="aditya_dendukuri_cv.pdf">CV</a></p>
+  <p><a href="https://github.com/AdityaDendukuri">Github</a></p>
+  <p><a href="https://www.linkedin.com/in/adityadendukuri/">Linkedin</a></p>
+  
+  <!-- Combined Introduction and Research Interests -->
+  <p>
+    <b>About Me & Research Interests</b><br />
+    I'm a computational scientist at the intersection of applied mathematics, scientific computing, and data science. My work focuses on stochastic modeling of discrete systems, rare event sampling methods, and efficient algorithms for high-dimensional systems. I enjoy collaborating across scientific disciplines, incorporating both computational and mathematical approaches to solve complex problems.
+  </p>
+  
+  <!-- Research Projects Section -->
+  <p>
+    <b>Current Projects</b><br />
+    
+    <!-- Project 1: Stochastic Simulation -->
+    <b>1. Efficient Stochastic Simulation Methods for Discrete Systems</b><br />
+    I develop algorithms for simulating stochastic biochemical networks governed by the Chemical Master Equation:
+    
+    <div class="equation">
+      $$ \frac{dP(\mathbf{x},t)}{dt} = \sum_{\mathbf{x}'\neq\mathbf{x}} \Bigl[W_{\mathbf{x}'\to\mathbf{x}}\,P(\mathbf{x}',t) - W_{\mathbf{x}\to\mathbf{x}'}\,P(\mathbf{x},t)\Bigr] $$
     </div>
-
-    <!-- Links and Other Details -->
-    <div class="links-list">
-      <p><a href="aditya_dendukuri_cv.pdf">CV</a></p>
-      <p><a href="https://github.com/AdityaDendukuri">Github</a></p>
-      <p><a href="https://www.linkedin.com/in/adityadendukuri/">Linkedin</a></p>
-      <p>
-       <b><u> Research Interests: </u></b><br />
-        Applied Mathematics/Scientific Computing, Data Science, Stochastic Modelling and Simulation.
-      </p>
-      <p>
-       <b><u> Current Projects: </u></b><br />
-       1. <b>Efficient Stochastic Simulation Methods for Discrete Systems</b><br />
-        My research focuses on developing efficient algorithms for the stochastic simulation of discrete systems, particularly biochemical reaction networks. These networks are inherently random, and their dynamics are governed by the Chemical Master Equation (CME):
-        \[ \frac{dP(\mathbf{x},t)}{dt} = \sum_{\mathbf{x}'\neq\mathbf{x}} \Bigl[W_{\mathbf{x}'\to\mathbf{x}}\,P(\mathbf{x}',t) - W_{\mathbf{x}\to\mathbf{x}'}\,P(\mathbf{x},t)\Bigr] \]
-        For example, the genetic toggle switch—two mutually repressing genes—is modeled by reactions such as:
-        \[ \varnothing \xrightarrow{\frac{\beta_A}{1+(B/K_B)^{n_B}}} A,\; A \xrightarrow{\delta_A} \varnothing \quad \text{and} \quad \varnothing \xrightarrow{\frac{\beta_B}{1+(A/K_A)^{n_A}}} B,\; B \xrightarrow{\delta_B} \varnothing \]
-        <img src="anim_fps15.gif" alt="Toggle Switch Simulation" style="max-width:700px;"> This GIF shows how stochastic fluctuations drive the system between states. To handle the exploding state space, we employ the Finite State Projection (FSP) method, which truncates the CME to a finite set of states. The FSP formulation partitions the transition-rate matrix as:
-        \[ \mathbf{W} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{T} & \mathbf{U} \end{pmatrix} \quad \text{approximated by} \quad \widetilde{\mathbf{W}} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{0} & \mathbf{0} \end{pmatrix} \]
-      </p>
-      My speficic research boils down to finding methods to control the finite state space of the system in time. 
-      <p>
-        1. <b>Markov Simulation of Nucleation (Crystal Formation)</b>
-        <img src="output.gif" alt="Nucleation"> 
-      </p>
-
-  </div>
-
+    
+    My research focuses on controlling the finite state space of these systems over time. For example, in genetic toggle switches (two mutually repressing genes), reactions include:
+    
+    <div class="equation">
+      $$ \varnothing \xrightarrow{\frac{\beta_A}{1+(B/K_B)^{n_B}}} A,\; A \xrightarrow{\delta_A} \varnothing \quad \text{and} \quad \varnothing \xrightarrow{\frac{\beta_B}{1+(A/K_A)^{n_A}}} B,\; B \xrightarrow{\delta_B} \varnothing $$
+    </div>
+    
+    <img src="anim_fps15.gif" alt="Toggle Switch Simulation" style="max-width:700px;">
+    
+    I implement the Finite State Projection (FSP) method to manage large state spaces:
+    
+    <div class="equation">
+      $$ \mathbf{W} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{T} & \mathbf{U} \end{pmatrix} \quad \text{approximated by} \quad \widetilde{\mathbf{W}} = \begin{pmatrix} \mathbf{Q} & \mathbf{R} \\ \mathbf{0} & \mathbf{0} \end{pmatrix} $$
+    </div>
+    
+    <!-- Project 2: Nucleation -->
+    <b>2. Markov Simulation of Nucleation (Crystal Formation)</b><br />
+    I developed Monte Carlo simulations of the Ising model to study nucleation—the initial stage of phase transitions such as crystallization. This C-based implementation applies umbrella sampling to construct free energy landscapes and capture rare nucleation events. The simulation is validated against theoretical predictions and includes visualization through ffmpeg integration.
+    
+    <video autoplay loop muted playsinline>
+  <source src="output.mp4" type="video/mp4">
+</video>
+    
+    <a href="https://github.com/AdityaDendukuri/IsingNucleation">GitHub Repository</a>
+  </p>
+</div>
 </body>
 </html>
