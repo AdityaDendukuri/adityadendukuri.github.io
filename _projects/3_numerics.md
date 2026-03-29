@@ -7,7 +7,7 @@ importance: 1
 category: software
 ---
 
-[**numerics**](https://github.com/AdityaDendukuri/numerics) is a C++ library consolidating numerical analysis coursework, algorithms, and performance optimizations built over several years. It covers sparse linear algebra, ODE/PDE solvers, SPH fluid dynamics, quantum circuit simulation, stochastic MCMC methods, and more.
+[**numerics**](https://adityadendukuri.github.io/numerics/) is a C++ library consolidating numerical analysis coursework, algorithms, and performance optimizations built over several years. It covers sparse linear algebra, ODE/PDE solvers, SPH fluid dynamics, quantum circuit simulation, stochastic MCMC methods, and more.
 
 The videos below are rendered directly from the library's simulation apps using raylib + ffmpeg.
 
