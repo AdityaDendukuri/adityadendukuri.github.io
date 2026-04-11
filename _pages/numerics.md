@@ -34,12 +34,62 @@ Derivations, error bounds, and proofs for the algorithms implemented here:
 
 **Simulations built with numerics and raylib**
 
-| | |
-|-|---|
-| **2D SPH Fluid** | Weakly compressible SPH with heat transport, rigid bodies, and particle injection. Tait EOS, cubic-spline kernel, Morris viscosity. |
-| **3D SPH Fluid** | WCSPH with opposing hose jets, heat transport, and a free-orbit camera. |
-| **Navier-Stokes** | Chorin projection on a staggered MAC grid. Semi-Lagrangian advection, matrix-free CG pressure solve. Kelvin-Helmholtz initial condition. |
-| **Ising Model** | Metropolis dynamics on a 300×300 lattice with live temperature/field sliders. Umbrella-sampled nucleation reproducing Brendel et al. (2005). |
-| **TDSE** | 2D time-dependent Schrödinger equation. Strang operator splitting, Crank-Nicolson kinetic sweeps, Lanczos eigendecomposition. Five interchangeable potentials. |
-| **Electromagnetism** | DC current flow + magnetostatics on a 32³ voxel grid. Four Poisson problems solved with matrix-free CG. Interactive magnetic dipole. |
-| **N-body** | Gravitational N-body dynamics with symplectic Verlet integration. |
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 1rem;">
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/fluid_sim_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>2D SPH Fluid</strong> — dam-break, heat transfer, rigid body</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/fluid_sim_3d_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>3D SPH Fluid</strong> — dual temperature hoses, free-orbit camera</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/ns_demo_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Navier-Stokes</strong> — Kelvin-Helmholtz instability, particle tracers</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/tdse_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Schrödinger Equation</strong> — double-slit diffraction, Strang splitting</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/ising_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Ising Nucleation</strong> — free-energy barrier crossing, umbrella sampling</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/em_demo_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Electromagnetism</strong> — Poisson solve, B-field, orbiting dipole</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/gal.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Galaxy Collapse</strong> — N-body gravity, symplectic Verlet, merging bodies</p>
+</div>
+
+<div>
+<video autoplay loop muted playsinline style="width:100%; border-radius:6px;">
+  <source src="/assets/video/quantum_demo_record.mp4" type="video/mp4">
+</video>
+<p style="font-size:0.82rem; color:#888; margin-top:4px;"><strong>Quantum Circuits</strong> — Bell, GHZ, Grover, teleportation, QFT</p>
+</div>
+
+</div>
