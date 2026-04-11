@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/adityadendukuri.github.io/numerics/";
           },
+        },{id: "nav-notes",
+          title: "notes",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/https:/adityadendukuri.github.io/cs111-scientific-computing-notes/";
+          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "Course materials, schedules, and resources for classes taught.",
