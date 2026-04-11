@@ -21,7 +21,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/https:/adityadendukuri.github.io/numerics/";
+            window.location.href = "/numerics/";
           },
         },{id: "nav-notes",
           title: "notes",
