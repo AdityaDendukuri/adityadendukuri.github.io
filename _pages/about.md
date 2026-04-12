@@ -26,4 +26,4 @@ My research interests are numerical analysis, scientific computing, and recently
 **Research.**
 My primary work develops methods for the [Chemical Master Equation (CME)](https://en.wikipedia.org/wiki/Master_equation), the governing equation for stochastic biochemical reaction networks. I focus on dynamically controlling the finite state projection (FSP) truncation so probability mass stays well-resolved as the system evolves. A parallel thread applies **Koopman operator theory** to recover reaction rate constants directly from trajectory data via Extended Dynamic Mode Decomposition (EDMD), bypassing the need to form the full CME generator.
 
-See the [projects page](/projects/) for details on both research directions and a gallery of simulation work.
+See the [projects page](/projects/) for details on both research directions and a gallery of simulation work. I also maintain [numerics](https://github.com/AdityaDendukuri/numerics), a high-performance numerical analysis framework in C++, and [Scientific Computing Notes](https://adityadendukuri.github.io/Scientific-Computing-Notes/), a set of notes in scientific computing I have compiled through my PhD.
