@@ -28,7 +28,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/https:/adityadendukuri.github.io/cs111-scientific-computing-notes/";
+            window.location.href = "/https:/adityadendukuri.github.io/Scientific-Computing-Notes/";
           },
         },{id: "nav-teaching",
           title: "teaching",
