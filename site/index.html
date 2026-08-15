@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aditya Dendukuri, PhD candidate in Computer Science at UC Santa Barbara."
+    />
+    <title>Aditya Dendukuri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="name" href="#top">Aditya Dendukuri</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#software">Software</a>
+        <a href="assets/aditya-dendukuri-cv.pdf">CV</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="about">
+        <img src="assets/aditya-dendukuri.jpg" alt="Aditya Dendukuri" />
+        <div>
+          <h1>Aditya Dendukuri</h1>
+          <p class="position">
+            PhD Candidate in Computer Science<br />
+            University of California, Santa Barbara
+          </p>
+          <p>
+            I work on numerical methods and scientific computing. My
+            dissertation focuses on forward simulation and inverse problems for
+            discrete stochastic systems. I am advised by Linda Petzold and am
+            currently a graduate student researcher at Lawrence Berkeley
+            National Laboratory.
+          </p>
+          <p class="links">
+            <a href="mailto:aditya_dendukuri@ucsb.edu">Email</a>
+            <a href="https://github.com/AdityaDendukuri">GitHub</a>
+            <a
+              href="https://scholar.google.com/citations?user=CLWuJj8AAAAJ&amp;hl=en"
+              >Google Scholar</a
+            >
+            <a href="https://www.linkedin.com/in/adityadendukuri/">LinkedIn</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+
+        <h3>Forward problems</h3>
+        <div class="item">
+          <h4>Flux-preserving adaptive finite state projection</h4>
+          <p>
+            An adaptive method for simulating multiscale stochastic reaction
+            networks. Accepted for publication in
+            <em>SIAM Journal on Multiscale Modeling &amp; Simulation</em>.
+            <a href="https://arxiv.org/abs/2512.17064">Preprint</a>
+          </p>
+        </div>
+        <div class="item">
+          <h4>Multigrid finite state projection</h4>
+          <p>
+            A multilevel method for spatially inhomogeneous reaction networks.
+            Presented at the 2026 Copper Mountain Conference on Multigrid
+            Methods. Paper in preparation for a SISC special issue.
+          </p>
+        </div>
+
+        <h3>Inverse problems</h3>
+        <div class="item">
+          <h4>Sparse identification of stochastic reaction networks</h4>
+          <p>
+            Sparse optimization with adjoint Krylov methods for learning
+            structured Markov generators. Preprint coming soon; manuscript in
+            preparation for SISC.
+          </p>
+        </div>
+        <div class="item">
+          <h4>Structured Koopman generator learning</h4>
+          <p>
+            Reaction-rate recovery from ensemble snapshots using structured
+            observable generators. Preprint coming soon; manuscript in
+            preparation for SIADS.
+          </p>
+        </div>
+
+        <h3>LBNL</h3>
+        <div class="item">
+          <h4>Exact linear subnetwork elimination</h4>
+          <p>
+            My current internship project develops subnetwork-elimination
+            methods for accelerating simulations of discrete Markov processes.
+          </p>
+        </div>
+
+        <p class="future">
+          I am also interested in sparse numerical linear algebra, matrix
+          functions, reduced-precision solvers, and adaptive numerical methods.
+        </p>
+      </section>
+
+      <section id="publications">
+        <h2>Selected publications</h2>
+        <ol class="publications">
+          <li>
+            <strong
+              >Flux-Preserving Adaptive Finite State Projection for Multiscale
+              Stochastic Reaction Networks.</strong
+            >
+            Aditya Dendukuri, Shivkumar Chandrasekaran, and Linda Petzold.
+            <em>SIAM Journal on Multiscale Modeling &amp; Simulation</em>,
+            accepted and forthcoming, 2026.
+            <a href="https://arxiv.org/abs/2512.17064">arXiv</a>
+          </li>
+          <li>
+            <strong
+              >Preconfigured neuronal firing sequences in human brain
+              organoids.</strong
+            >
+            Tjitse van der Molen, Alex Spaeth, Mattia Chini, et al.
+            <em>Nature Neuroscience</em> 29, 123–135, 2026.
+            <a href="https://doi.org/10.1038/s41593-025-02111-0">Journal</a>
+          </li>
+          <li>
+            <strong
+              >Unified Framework for Real-Time Fluid Simulation in Virtual
+              Rotator Cuff Arthroscopic Skill Trainer.</strong
+            >
+            Aditya Dendukuri, Mustafa Tunc, Doga Demirel, Sinan Kockara, and
+            Tansel Halic.
+            <em>IEEE BIBE</em>, 2023. Best Paper Award.
+            <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
+          </li>
+          <li>
+            <strong
+              >Machine Learning to Identify Variables in Thermodynamically Small
+              Systems.</strong
+            >
+            David M. Ford, Aditya Dendukuri, Gulce Kalyoncu, Khoa Luu, and
+            Matthew J. Patitz.
+            <em>Computers &amp; Chemical Engineering</em>, 2020.
+          </li>
+          <li>
+            <strong
+              >A hierarchical task analysis of shoulder arthroscopy for a
+              virtual arthroscopic training platform.</strong
+            >
+            Doga Demirel, Alexander Yu, Seth Cooper-Baer, Aditya Dendukuri, et
+            al.
+            <em
+              >International Journal of Medical Robotics and Computer Assisted
+              Surgery</em
+            >, 2017.
+          </li>
+        </ol>
+      </section>
+
+      <section id="software">
+        <h2>Software and teaching</h2>
+        <ul class="resources">
+          <li>
+            <a href="https://github.com/AdityaDendukuri/numerics"
+              ><strong>numerics</strong></a
+            >
+            <span>C++20 numerical kernels and solvers.</span>
+          </li>
+          <li>
+            <a href="https://github.com/AdityaDendukuri/markovkit"
+              ><strong>markovkit</strong></a
+            >
+            <span
+              >C++20 tools for Markov processes, FSP, and subnetwork
+              elimination.</span
+            >
+          </li>
+          <li>
+            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"
+              ><strong>approxchol</strong></a
+            >
+            <span>Approximate Cholesky factorization for SDD M-matrices.</span>
+          </li>
+          <li>
+            <a
+              href="https://adityadendukuri.github.io/Scientific-Computing-Notes/"
+              ><strong>Scientific Computing Notes</strong></a
+            >
+            <span>Online teaching notes and examples.</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>Aditya Dendukuri</span>
+      <a href="assets/aditya-dendukuri-cv.pdf">Curriculum vitae</a>
+    </footer>
+  </body>
+</html>
