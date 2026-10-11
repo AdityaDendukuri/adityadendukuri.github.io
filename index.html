@@ -15,6 +15,7 @@
       <a class="name" href="#top">Aditya Dendukuri</a>
       <nav aria-label="Main navigation">
         <a href="#research">Research</a>
+        <a href="#past-research">Past research</a>
         <a href="#publications">Publications</a>
         <a href="#talks">Talks</a>
         <a href="#software">Software</a>
@@ -32,15 +33,19 @@
             University of California, Santa Barbara
           </p>
           <p>
-            My research develops numerical methods for simulation and inference in
-            large-scale dynamical systems, with an emphasis on structure-exploiting
-            linear algebra and Markov chains. I am advised by Linda Petzold and am an
-            affiliate at Lawrence Berkeley National Laboratory.
+            My research develops numerical methods for simulation and inference
+            in large-scale dynamical systems, with an emphasis on
+            structure-exploiting linear algebra and Markov chains. I am advised
+            by Linda Petzold and am an affiliate at Lawrence Berkeley National
+            Laboratory.
           </p>
           <p class="links">
             <a href="mailto:aditya_dendukuri@ucsb.edu">Email</a>
             <a href="https://github.com/AdityaDendukuri">GitHub</a>
-            <a href="https://scholar.google.com/citations?user=CLWuJj8AAAAJ&amp;hl=en">Google Scholar</a>
+            <a
+              href="https://scholar.google.com/citations?user=CLWuJj8AAAAJ&amp;hl=en"
+              >Google Scholar</a
+            >
             <a href="https://www.linkedin.com/in/adityadendukuri/">LinkedIn</a>
           </p>
         </div>
@@ -53,21 +58,22 @@
         <div class="item">
           <h4>Flux-preserving adaptive finite state projection</h4>
           <p>
-            An adaptive method for multiscale stochastic reaction networks. It uses
-            probability flux to retain transient pathways that density-based pruning can
-            miss.
-            <strong>Accepted for publication</strong> in <em>SIAM Journal on Multiscale Modeling &amp;
-            Simulation</em>.
+            An adaptive method for multiscale stochastic reaction networks. It
+            uses probability flux to retain transient pathways that
+            density-based pruning can miss.
+            <strong>Accepted for publication</strong> in
+            <em>SIAM Journal on Multiscale Modeling &amp; Simulation</em>.
             <a href="https://arxiv.org/abs/2512.17064">Preprint</a>
           </p>
         </div>
         <div class="item">
           <h4>Multigrid finite state projection</h4>
           <p>
-            A multilevel finite state projection method for spatially resolved reaction
-            networks. Coarse models guide refinement so that fine resolution is used only
-            where it is needed. Presented at the 2026 Copper Mountain Conference on
-            Multigrid Methods. Paper in preparation for a SISC special issue.
+            A multilevel finite state projection method for spatially resolved
+            reaction networks. Coarse models guide refinement so that fine
+            resolution is used only where it is needed. Presented at the 2026
+            Copper Mountain Conference on Multigrid Methods. Paper in
+            preparation for a SISC special issue.
           </p>
         </div>
 
@@ -75,10 +81,11 @@
         <div class="item">
           <h4>Adjoint Krylov methods for parameter inference</h4>
           <p>
-            We estimate the coefficients of large linear evolution equations from
-            observations at discrete times. A forward and adjoint Krylov calculation is
-            shared across the operator library, which keeps the gradient calculation
-            manageable when many candidate mechanisms are considered. <strong>Under review</strong> at
+            We estimate the coefficients of large linear evolution equations
+            from observations at discrete times. A forward and adjoint Krylov
+            calculation is shared across the operator library, which keeps the
+            gradient calculation manageable when many candidate mechanisms are
+            considered. <strong>Under review</strong> at
             <em>SIAM Journal on Scientific Computing</em>.
             <a href="assets/adjoint-krylov-parameter-inference.pdf">Preprint</a>
           </p>
@@ -86,10 +93,11 @@
         <div class="item">
           <h4>Structured Koopman generator learning</h4>
           <p>
-            We estimate reaction rates from molecular states observed at a fixed time
-            separation, without constructing the full Chemical Master Equation. The
-            method learns the evolution of selected observables and uses
-            reaction-generated functions to reduce projection bias. <strong>Under review</strong> at
+            We estimate reaction rates from molecular states observed at a fixed
+            time separation, without constructing the full Chemical Master
+            Equation. The method learns the evolution of selected observables
+            and uses reaction-generated functions to reduce projection bias.
+            <strong>Under review</strong> at
             <em>SIAM Journal on Applied Dynamical Systems</em>.
             <a href="assets/koopman-cme-parameter-inference.pdf">Preprint</a>
           </p>
@@ -98,15 +106,47 @@
         <h3>2026 LBNL internship</h3>
         <div class="item">
           <p>
-            Research on numerical algorithms for accelerating computations with large
-            Markov chains.
+            Research on numerical algorithms for accelerating computations with
+            large Markov chains.
           </p>
         </div>
 
         <p class="future">
-          I am also interested in sparse numerical linear algebra, matrix functions,
-          reduced-precision solvers, and adaptive numerical methods.
+          I am also interested in sparse numerical linear algebra, matrix
+          functions, reduced-precision solvers, and adaptive numerical methods.
         </p>
+      </section>
+
+      <section id="past-research">
+        <h2>Past research</h2>
+
+        <h3>Undergraduate research</h3>
+        <div class="item">
+          <h4>Real-time fluid and heat simulation for virtual surgery</h4>
+          <p>
+            I worked on a real-time physical simulation for ViRCAST, a virtual
+            trainer for arthroscopic surgery. We used smoothed particle
+            hydrodynamics to model irrigation flow and heat transfer in a single
+            framework, then parallelized the solver with OpenMP for interactive
+            performance.
+            <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
+          </p>
+        </div>
+
+        <h3>Master's research</h3>
+        <div class="item">
+          <h4>Learning coordinates for thermodynamically small systems</h4>
+          <p>
+            I studied how to identify useful low-dimensional variables for small
+            molecular systems from Monte Carlo data. Diffusion maps,
+            autoencoders, and neural networks revealed a two-dimensional
+            description of three-particle Lennard-Jones clusters and guided the
+            choice of simple geometric coordinates.
+            <a href="https://doi.org/10.1016/j.compchemeng.2020.106989"
+              >Paper</a
+            >
+          </p>
+        </div>
       </section>
 
       <section id="talks">
@@ -114,12 +154,21 @@
         <div class="item">
           <h3>SIAM Annual Meeting 2026</h3>
           <p>
-            <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"><strong>Data-Driven Rate Recovery and Sensitivity Analysis for Discrete Stochastic Chemical Reaction Systems.</strong></a>
+            <a
+              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
+              ><strong
+                >Data-Driven Rate Recovery and Sensitivity Analysis for Discrete
+                Stochastic Chemical Reaction Systems.</strong
+              ></a
+            >
             Cleveland, Ohio.
           </p>
           <p>
             <strong>Session chair.</strong>
-            <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397">CP17: Stochastic Systems</a>.
+            <a
+              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
+              >CP17: Stochastic Systems</a
+            >.
           </p>
         </div>
       </section>
@@ -128,44 +177,77 @@
         <h2>Selected publications and preprints</h2>
         <ol class="publications">
           <li>
-            <strong>An Adjoint Krylov Approach to Parameter Inference for Affine Families of Linear Evolution Equations.</strong>
+            <strong
+              >An Adjoint Krylov Approach to Parameter Inference for Affine
+              Families of Linear Evolution Equations.</strong
+            >
             Aditya Dendukuri, Shivkumar Chandrasekaran, and Linda Petzold.
-            <strong>Under review</strong> at <em>SIAM Journal on Scientific Computing</em>, 2026.
+            <strong>Under review</strong> at
+            <em>SIAM Journal on Scientific Computing</em>, 2026.
             <a href="assets/adjoint-krylov-parameter-inference.pdf">Preprint</a>
           </li>
           <li>
-            <strong>Koopman Operator Inference for the Chemical Master Equation.</strong>
+            <strong
+              >Koopman Operator Inference for the Chemical Master
+              Equation.</strong
+            >
             Aditya Dendukuri and Linda Petzold.
-            <strong>Under review</strong> at <em>SIAM Journal on Applied Dynamical Systems</em>, 2026.
+            <strong>Under review</strong> at
+            <em>SIAM Journal on Applied Dynamical Systems</em>, 2026.
             <a href="assets/koopman-cme-parameter-inference.pdf">Preprint</a>
           </li>
           <li>
-            <strong>Flux-Preserving Adaptive Finite State Projection for Multiscale Stochastic Reaction Networks.</strong>
+            <strong
+              >Flux-Preserving Adaptive Finite State Projection for Multiscale
+              Stochastic Reaction Networks.</strong
+            >
             Aditya Dendukuri, Shivkumar Chandrasekaran, and Linda Petzold.
-            <strong>Accepted and forthcoming</strong> in <em>SIAM Journal on Multiscale Modeling &amp; Simulation</em>, 2026.
+            <strong>Accepted and forthcoming</strong> in
+            <em>SIAM Journal on Multiscale Modeling &amp; Simulation</em>, 2026.
             <a href="https://arxiv.org/abs/2512.17064">arXiv</a>
           </li>
           <li>
-            <strong>Preconfigured neuronal firing sequences in human brain organoids.</strong>
+            <strong
+              >Preconfigured neuronal firing sequences in human brain
+              organoids.</strong
+            >
             Tjitse van der Molen, Alex Spaeth, Mattia Chini, et al.
             <em>Nature Neuroscience</em> 29, 123–135, 2026.
             <a href="https://doi.org/10.1038/s41593-025-02111-0">Journal</a>
           </li>
           <li>
-            <strong>Unified Framework for Real-Time Fluid Simulation in Virtual Rotator Cuff Arthroscopic Skill Trainer.</strong>
-            Aditya Dendukuri, Mustafa Tunc, Doga Demirel, Sinan Kockara, and Tansel Halic.
+            <strong
+              >Unified Framework for Real-Time Fluid Simulation in Virtual
+              Rotator Cuff Arthroscopic Skill Trainer.</strong
+            >
+            Aditya Dendukuri, Mustafa Tunc, Doga Demirel, Sinan Kockara, and
+            Tansel Halic.
             <em>IEEE BIBE</em>, 2023. Best Paper Award.
             <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
           </li>
           <li>
-            <strong>Machine Learning to Identify Variables in Thermodynamically Small Systems.</strong>
-            David M. Ford, Aditya Dendukuri, Gulce Kalyoncu, Khoa Luu, and Matthew J. Patitz.
+            <strong
+              >Machine Learning to Identify Variables in Thermodynamically Small
+              Systems.</strong
+            >
+            David M. Ford, Aditya Dendukuri, Gulce Kalyoncu, Khoa Luu, and
+            Matthew J. Patitz.
             <em>Computers &amp; Chemical Engineering</em>, 2020.
+            <a href="https://doi.org/10.1016/j.compchemeng.2020.106989"
+              >Paper</a
+            >
           </li>
           <li>
-            <strong>A hierarchical task analysis of shoulder arthroscopy for a virtual arthroscopic training platform.</strong>
-            Doga Demirel, Alexander Yu, Seth Cooper-Baer, Aditya Dendukuri, et al.
-            <em>International Journal of Medical Robotics and Computer Assisted Surgery</em>, 2017.
+            <strong
+              >A hierarchical task analysis of shoulder arthroscopy for a
+              virtual arthroscopic training platform.</strong
+            >
+            Doga Demirel, Alexander Yu, Seth Cooper-Baer, Aditya Dendukuri, et
+            al.
+            <em
+              >International Journal of Medical Robotics and Computer Assisted
+              Surgery</em
+            >, 2017.
           </li>
         </ol>
       </section>
@@ -174,19 +256,31 @@
         <h2>Software and teaching</h2>
         <ul class="resources">
           <li>
-            <a href="https://adityadendukuri.github.io/numerics/"><strong>numerics</strong></a>
+            <a href="https://adityadendukuri.github.io/numerics/"
+              ><strong>numerics</strong></a
+            >
             <span>C++20 numerical kernels and solvers.</span>
           </li>
           <li>
-            <a href="https://github.com/AdityaDendukuri/markovkit"><strong>markovkit</strong></a>
-            <span>C++20 tools for Markov processes, FSP, and subnetwork elimination.</span>
+            <a href="https://github.com/AdityaDendukuri/markovkit"
+              ><strong>markovkit</strong></a
+            >
+            <span
+              >C++20 tools for Markov processes, FSP, and subnetwork
+              elimination.</span
+            >
           </li>
           <li>
-            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"><strong>approxchol</strong></a>
+            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"
+              ><strong>approxchol</strong></a
+            >
             <span>Approximate Cholesky factorization for SDD M-matrices.</span>
           </li>
           <li>
-            <a href="https://adityadendukuri.github.io/Scientific-Computing-Notes/"><strong>Scientific Computing Notes</strong></a>
+            <a
+              href="https://adityadendukuri.github.io/Scientific-Computing-Notes/"
+              ><strong>Scientific Computing Notes</strong></a
+            >
             <span>Online teaching notes and examples.</span>
           </li>
         </ul>
