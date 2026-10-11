@@ -12,6 +12,7 @@
 \usepackage{fancyhdr}
 \usepackage[backend=bibtex,style=ieee]{biblatex}
 \bibliography{ref}
+\DeclareFieldFormat[article,inproceedings,misc]{title}{\mkbibbold{#1}}
 
 % Formatting
 \setlist{noitemsep}
@@ -151,7 +152,7 @@ Advisor: Tansel Halic \\
 % Conferences Section
 \section*{Conference Presentations}
 \begin{itemize}
-    \item Data-Driven Rate Recovery and Sensitivity Analysis for Discrete Stochastic Chemical Reaction Systems. SIAM Annual Meeting, Cleveland, OH, 2026.
+    \item \textbf{Data-Driven Rate Recovery and Sensitivity Analysis for Discrete Stochastic Chemical Reaction Systems.} SIAM Annual Meeting, Cleveland, OH, 2026.
     \item \fullcite{rdme_boulder}
     \item \fullcite{dendukurip:bibe}
     \item \fullcite{siam}
