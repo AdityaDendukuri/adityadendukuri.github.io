@@ -52,7 +52,9 @@
         <div class="item">
           <h4>Flux-preserving adaptive finite state projection</h4>
           <p>
-            An adaptive method for simulating multiscale stochastic reaction networks.
+            An adaptive method for multiscale stochastic reaction networks. It uses
+            probability flux to retain transient pathways that density-based pruning can
+            miss.
             Accepted for publication in <em>SIAM Journal on Multiscale Modeling &amp;
             Simulation</em>.
             <a href="https://arxiv.org/abs/2512.17064">Preprint</a>
@@ -61,9 +63,10 @@
         <div class="item">
           <h4>Multigrid finite state projection</h4>
           <p>
-            A multilevel method for spatially inhomogeneous reaction networks. Presented
-            at the 2026 Copper Mountain Conference on Multigrid Methods. Paper in
-            preparation for a SISC special issue.
+            A multilevel finite state projection method for spatially resolved reaction
+            networks. Coarse models guide refinement so that fine resolution is used only
+            where it is needed. Presented at the 2026 Copper Mountain Conference on
+            Multigrid Methods. Paper in preparation for a SISC special issue.
           </p>
         </div>
 
@@ -71,8 +74,9 @@
         <div class="item">
           <h4>Adjoint Krylov methods for parameter inference</h4>
           <p>
-            Parameter inference for large, sparse evolution equations with structured
-            operator libraries. Submitted to
+            Parameter inference for large evolution equations with structured operator
+            libraries. Shared forward and adjoint Krylov trajectories compute gradients
+            across all candidate mechanisms. Submitted to
             <em>SIAM Journal on Scientific Computing</em>.
             <a href="assets/adjoint-krylov-parameter-inference.pdf">Paper</a>
           </p>
@@ -80,8 +84,9 @@
         <div class="item">
           <h4>Structured Koopman generator learning</h4>
           <p>
-            Reaction-rate recovery from ensemble snapshots using structured observable
-            generators. Submitted to
+            Reaction-rate inference from molecular-state pairs without constructing the
+            full Chemical Master Equation. Reaction-generated observables reduce the
+            projection bias in the learned Koopman generator. Submitted to
             <em>SIAM Journal on Applied Dynamical Systems</em>.
             <a href="assets/koopman-cme-parameter-inference.pdf">Paper</a>
           </p>
@@ -91,8 +96,9 @@
         <div class="item">
           <h4>Exact linear subnetwork elimination</h4>
           <p>
-            My current internship project develops subnetwork-elimination methods for
-            accelerating simulations of discrete Markov processes.
+            Exact linear-algebraic reductions for large discrete Markov models. The aim is
+            to remove costly subnetworks while preserving their influence on the retained
+            states.
           </p>
         </div>
 
