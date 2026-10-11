@@ -1,0 +1,216 @@
+% Document class and font size
+\documentclass[a4paper,9pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.75in}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\bibliography{ref}
+
+% Formatting
+\setlist{noitemsep}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand\mycite[1]{\AtNextCite{\defcounter{maxnames}{1}}\citeauthor{#1}, \citeyear{#1}}
+
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyhead[L]{\textit{Aditya Dendukuri}}
+\fancyhead[R]{\textit{PhD Candidate at UCSB}}
+\thispagestyle{empty}
+
+% Header
+\begin{center}
+    \textbf{\LARGE Aditya Dendukuri}\\[2pt]
+    PhD Candidate \\ University of California, Santa Barbara\\[6pt]
+    \href{mailto:dendukuri.aditya123@outlook.com}{dendukuri.aditya123@outlook.com} \\ 
+    \href{https://adityadendukuri.github.io/}{adityadendukuri.github.io} 
+\end{center}
+
+% Research Interests Section
+\section*{Research Interests}
+\noindent
+Numerical analysis, mathematical modeling and scientific machine learning. 
+
+% Education Section
+\section*{Education}
+\noindent
+\textbf{University of California, Santa Barbara CA}\hfill Sept 2021 | Present\\
+PhD in Computer Science \hfill \\
+Advisor: Linda R. Petzold 
+%\textit{Expected Graduation: Winter 2027}
+
+\noindent\\
+\textbf{University of Arkansas, Fayetteville AR} \hfill Aug 2018 | Jul 2020\\
+MS in Computer Science \\
+Advisors: David M. Ford and Matthew J. Patitz \\
+Thesis: Nonlinear Dimensionality Reduction for the Thermodynamics of Small Clusters of Particles
+
+\noindent\\
+\textbf{University of Central Arkansas, Conway AR} \hfill Aug 2014 | May 2018\\
+BS in Computer Science (Minor in Physics)\\
+Advisor: Tansel Halic \\
+
+
+
+\section*{Professional Experience}
+
+\noindent
+\textbf{Lawrence Berkeley National Laboratory} \hfill Berkeley, CA\\
+\textit{UC Graduate Student Researcher (GSR) Intern} \hfill July 2026 -- present
+\begin{itemize}
+    \item Develop efficient approximation methods for stochastic processes, particularly continuous-time Markov chains arising in chemical kinetics and reaction networks.
+    \item Devise mathematical methods and implement computational programs for accurately simulating stochastic processes arising in physical science and artificial intelligence applications.
+    \item Collaborate with scientists in the Applied Mathematics and Computational Research Division on computational methods in advanced mathematics and machine learning.
+\end{itemize}
+
+\noindent
+\textbf{NSF National Center for Atmospheric Research (NCAR)} \hfill Boulder, CO\\
+\textit{SIParCS Graduate Student Intern} \hfill May 2024 -- July 2024
+\begin{itemize}
+    \item Contributed to translating a radiative transfer codebase from Fortran to C++ and prepared documentation to support maintainability and future development.
+    \item Implemented a custom solver for tridiagonal linear systems and benchmarked it against LAPACKE to evaluate numerical accuracy and performance.
+    \item Extended testing coverage for critical linear algebra components using Google Test and added performance benchmarks with Google Benchmark.
+\end{itemize}
+
+\noindent
+\textbf{University of Arkansas} \hfill Fayetteville, AR\\
+\textit{Research Associate} \hfill Sept 2020 -- June 2021
+\begin{itemize}
+    \item Modeled nucleation and phase-transition processes using Monte Carlo simulations and implemented custom C code to analyze critical-cluster formation dynamics.
+\end{itemize}
+
+\section*{Research Assistantships}
+
+\noindent
+\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
+\textit{Graduate Research Assistant} \hfill Sept 2021 -- Present
+\begin{itemize}
+    \item Develop structure-exploiting numerical algorithms for analyzing high-dimensional discrete stochastic systems, enabling efficient simulation and inference for complex reaction networks.
+    \item Investigate surrogate modeling approaches for understanding activity in lab-grown neural tissues, using time-series analysis and dimensionality reduction to extract interpretable spatiotemporal dynamics.
+\end{itemize}
+
+\noindent
+\textbf{University of Arkansas} \hfill Fayetteville, AR\\
+\textit{Graduate Research Assistant} \hfill Aug 2018 -- July 2020
+\begin{itemize}
+    \item Explored the thermodynamic properties of colloidal clusters using data-driven methods, reconstructing energy landscapes and transition pathways from stochastic simulations.
+    \item Simulated quantum circuits to investigate hybrid quantum-classical learning models and developed workflows for evaluating variational quantum algorithms.
+    \item Published results on data-driven thermodynamics in \textit{Computers \& Chemical Engineering}.
+\end{itemize}
+
+\noindent
+\textbf{University of Central Arkansas} \hfill Conway, AR\\
+\textit{Undergraduate Research Assistant} \hfill Aug 2016 -- May 2018
+\begin{itemize}
+    \item Developed real-time surgical training simulations by coupling fluid-flow and heat-transfer models in a numerical solver.
+    \item Conducted hierarchical task analysis using observational data from arthroscopic surgeries to inform system design and evaluation.
+    \item Presented and published this work at the 23rd IEEE International Conference on Bioinformatics and Bioengineering.
+\end{itemize}
+
+\section*{Teaching Assistantships}
+
+\noindent
+\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
+\textit{Graduate Teaching Assistant} \hfill Sept 2021 -- Present
+\begin{itemize}
+    \item Supported undergraduate instruction in scientific computing, data structures, and numerical methods, including programming in Python, C++, and MATLAB.
+\end{itemize}
+\section*{Preprints (Under Review/ In Press)}
+\noindent
+\begin{itemize}
+    \item \fullcite{dendukuri2026adjointkrylov}
+    \item \fullcite{dendukuri2026koopmancme}
+    \item \fullcite{dendukuri2025fluxpreservingadaptivefinitestate} 
+    \begin{itemize}
+        \item Accepted for publication (in press) at \textit{SIAM Multiscale Modeling and Simulation}.
+    \end{itemize}
+\end{itemize}
+
+% Publications Section
+\section*{Publications}
+\noindent
+\begin{itemize}
+    \item \fullcite{van_der_molen_preconfigured_2026}    
+    \item \fullcite{dendukuri:bibe}
+    \item \fullcite{ford2020machine}
+    \item \fullcite{demirel2017hierarchical}
+\end{itemize}
+
+% Conferences Section
+\section*{Conference Presentations}
+\begin{itemize}
+    \item \fullcite{rdme_boulder}
+    \item \fullcite{dendukurip:bibe}
+    \item \fullcite{siam}
+    \item \fullcite{fopam}
+    \item \fullcite{qtml}
+    \item \fullcite{inbre}
+    \item \fullcite{aas}
+\end{itemize}
+
+% Honors Section
+\section*{Honors}
+\begin{itemize}[leftmargin=*]
+    \item Best paper award. IEEE Bioinformatics and Bioengineering (BIBE) Conference 2023. 
+    \item Masters thesis nominated for the \textit{Conference of Southern Graduate Schools (CSGS)} outstanding master's thesis award.
+    \item Graduate Student Council Travel Grant (\$500) for the Foundations of Process Analytics and Machine Learning Conference in Raleigh, North Carolina (Summer 2019).
+    \item Advancement of Undergraduate Research in the Sciences (AURS) summer research fund (2016) (\url{http://www.aursfund.org}) Award Amount: \$5000
+\end{itemize}
+
+% Selected Courses Section
+\section*{Selected Courses}
+\begin{tabularx}{1\textwidth}{
+>{\raggedright\arraybackslash}X
+>{\raggedright\arraybackslash}X}
+\textbf{PhD Courses (UCSB)}& \textbf{MS Courses (UofA)}\\
+\begin{itemize}
+    \item Matrix Analysis and Computation
+    \item Level Set Methods
+    \item Finite Element Methods
+    \item Numerical Simulation
+    \item Spectral Graph Theory
+\end{itemize}
+& \begin{itemize}
+    \item Deep Learning
+    \item Natural Language Processing
+    \item Computer Vision
+\end{itemize}\\
+\end{tabularx}
+
+% Skills Section
+\section*{Skills (2-3 Years of Full-Time Experience)}
+\begin{itemize}
+    \item \textbf{Programming:} Julia, Python, C/C++
+    \item \textbf{Software:} Tensorflow and PyTorch (Python), Modelling Toolkit (Julia), SciML (Julia), Linux, CMAKE.
+\end{itemize}
+
+% References Section
+\section*{References} 
+\textbf{}
+\textbf{Dr. Linda R. Petzold} (petzold@engineering.ucsb.edu)\\
+Mehrabian Distinguished Professor, Mechanical Engineering and Computer Science, University of California, Santa Barbara.  
+\vspace{4pt}\\
+\textbf{Jian Sun} (sunjian@ucar.edu)\\
+Soft Eng/Prog II, NSF National Center for Atmospheric Research
+\vspace{4pt}\\
+\textbf{Dr. David Ford} (ford3dm@cmich.edu) \\
+Dean, Bagley College of Engineering, Mississippi State University.\\
+Past: Professor and Department Head. Ralph E. Martin Department of Chemical Engineering, University of Arkansas. 
+\vspace{4pt}\\
+\textbf{Dr. Tansel Halic} (tanselhalic@gmail.com) \\
+Senior Software Engineer, Intuitive Surgical.
+
+\end{document}
