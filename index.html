@@ -74,9 +74,10 @@
         <div class="item">
           <h4>Adjoint Krylov methods for parameter inference</h4>
           <p>
-            Parameter inference for large evolution equations with structured operator
-            libraries. Shared forward and adjoint Krylov trajectories compute gradients
-            across all candidate mechanisms. Submitted to
+            We estimate the coefficients of large linear evolution equations from
+            observations at discrete times. A forward and adjoint Krylov calculation is
+            shared across the operator library, which keeps the gradient calculation
+            manageable when many candidate mechanisms are considered. Submitted to
             <em>SIAM Journal on Scientific Computing</em>.
             <a href="assets/adjoint-krylov-parameter-inference.pdf">Preprint</a>
           </p>
@@ -84,9 +85,10 @@
         <div class="item">
           <h4>Structured Koopman generator learning</h4>
           <p>
-            Reaction-rate inference from molecular-state pairs without constructing the
-            full Chemical Master Equation. Reaction-generated observables reduce the
-            projection bias in the learned Koopman generator. Submitted to
+            We estimate reaction rates from molecular states observed at a fixed time
+            separation, without constructing the full Chemical Master Equation. The
+            method learns the evolution of selected observables and uses
+            reaction-generated functions to reduce projection bias. Submitted to
             <em>SIAM Journal on Applied Dynamical Systems</em>.
             <a href="assets/koopman-cme-parameter-inference.pdf">Preprint</a>
           </p>
