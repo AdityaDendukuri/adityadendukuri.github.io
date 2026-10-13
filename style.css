@@ -159,14 +159,6 @@ h3.ucsb {
   color: var(--ucsb);
 }
 
-h3.uark {
-  color: var(--uark);
-}
-
-h3.uca {
-  color: var(--uca);
-}
-
 #past-research .item {
   padding-left: 14px;
   border-left: 3px solid var(--line);
