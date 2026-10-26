@@ -15,10 +15,11 @@
       <a class="name" href="#top">Aditya Dendukuri</a>
       <nav aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#past-research">Past research</a>
+        <a href="#software">Software</a>
         <a href="#papers">Papers</a>
         <a href="#talks">Talks</a>
-        <a href="#software">Software</a>
+        <a href="#past-research">Past research</a>
+        <a href="#teaching">Teaching</a>
         <a href="assets/aditya-dendukuri-cv.pdf">CV</a>
       </nav>
     </header>
@@ -38,6 +39,11 @@
             structure-exploiting linear algebra and Markov chains. I am advised
             by Linda Petzold and am an affiliate at Lawrence Berkeley National
             Laboratory.
+          </p>
+          <p>
+            I also build open-source C++ software that carries these methods
+            into practice, from low-level numerical kernels to complete solvers
+            for stochastic reaction networks.
           </p>
           <p class="links">
             <a href="mailto:aditya_dendukuri@ucsb.edu">Email</a>
@@ -87,7 +93,7 @@
             gradient calculation manageable when many candidate mechanisms are
             considered. <strong>Under review</strong> at
             <em>SIAM Journal on Scientific Computing</em>.
-            <a href="assets/adjoint-krylov-parameter-inference.pdf">Preprint</a>
+            <a href="https://arxiv.org/abs/2610.15940">Preprint</a>
           </p>
         </div>
         <div class="item">
@@ -99,7 +105,7 @@
             and uses reaction-generated functions to reduce projection bias.
             <strong>Under review</strong> at
             <em>SIAM Journal on Applied Dynamical Systems</em>.
-            <a href="assets/koopman-cme-parameter-inference.pdf">Preprint</a>
+            <a href="https://arxiv.org/abs/2610.15937">Preprint</a>
           </p>
         </div>
 
@@ -117,82 +123,62 @@
         </p>
       </section>
 
-      <section id="past-research">
-        <h2>Past research</h2>
+      <section id="software">
+        <h2>Software</h2>
 
-        <div class="item ucsb">
-          <h4>Firing sequences in human brain organoids</h4>
+        <div class="project">
+          <h4>
+            <a href="https://github.com/AdityaDendukuri/markovkit">markovkit</a>
+          </h4>
           <p>
-            I analyzed spontaneous activity in human brain organoids with
-            time-series and reduced-order methods to identify firing sequences
-            that recur across space and time. Their presence without sensory
-            input suggests the sequences are set by circuit structure formed
-            during development.
-            <em>Nature Neuroscience</em>, 2026.
-            <a href="https://doi.org/10.1038/s41593-025-02111-0">Paper</a>
+            A C++20 library for continuous-time Markov chains and stochastic
+            reaction networks: adaptive and Krylov finite state projection,
+            stochastic simulation, and reaction-diffusion master equation
+            models with multigrid solvers.
+          </p>
+          <p class="uses">
+            Implements my flux-preserving adaptive FSP and multigrid FSP work.
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/AdityaDendukuri/markovkit">GitHub</a>
           </p>
         </div>
 
-        <div class="item uark">
-          <h4>Learning coordinates for thermodynamically small systems</h4>
+        <div class="project">
+          <h4>
+            <a href="https://adityadendukuri.github.io/numerics/">numerics</a>
+          </h4>
           <p>
-            I studied how to identify useful low-dimensional variables for small
-            molecular systems from Monte Carlo data. Diffusion maps,
-            autoencoders, and neural networks revealed a two-dimensional
-            description of three-particle Lennard-Jones clusters and guided the
-            choice of simple geometric coordinates.
-            <a href="https://doi.org/10.1016/j.compchemeng.2020.106989"
-              >Paper</a
+            A C++20 library of numerical methods: dense, banded, and sparse
+            linear algebra, Krylov solvers, eigenvalues and the SVD, ODE
+            integrators, PDEs, FFTs, quadrature, and graphs. Optional BLAS,
+            LAPACK, OpenMP, CUDA, FFTW, and SuiteSparse backends.
+          </p>
+          <p class="uses">
+            The numerical foundation for markovkit and my research codes.
+          </p>
+          <p class="project-links">
+            <a href="https://adityadendukuri.github.io/numerics/"
+              >Documentation</a
             >
+            <a href="https://github.com/AdityaDendukuri/numerics">GitHub</a>
           </p>
         </div>
 
-        <div class="item uca">
-          <h4>Real-time fluid and heat simulation for virtual surgery</h4>
-          <p>
-            I worked on a real-time physical simulation for ViRCAST, a virtual
-            trainer for arthroscopic surgery. We used smoothed particle
-            hydrodynamics to model irrigation flow and heat transfer in a single
-            framework, then parallelized the solver with OpenMP for interactive
-            performance.
-            <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
-          </p>
-        </div>
-      </section>
-
-      <section id="talks">
-        <h2>Talks and service</h2>
-        <div class="item">
-          <h3>SIAM Annual Meeting 2026</h3>
-          <p>
-            <a
-              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
-              ><strong
-                >Data-Driven Rate Recovery and Sensitivity Analysis for Discrete
-                Stochastic Chemical Reaction Systems.</strong
-              ></a
+        <div class="project">
+          <h4>
+            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"
+              >approxchol</a
             >
-            Cleveland, Ohio.
-          </p>
+          </h4>
           <p>
-            <strong>Session chair.</strong>
-            <a
-              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
-              >CP17: Stochastic Systems</a
-            >.
+            Header-only randomized approximate Cholesky factorization for graph
+            Laplacians and SDD M-matrices, for use as a fast preconditioner.
           </p>
-        </div>
-        <div class="item">
-          <h3>Colorado Conference for Iterative and Multigrid Methods 2026</h3>
-          <p>
-            <a
-              href="https://easychair.org/smart-program/CCIMM26/2026-06-25.html#talk:312975"
-              ><strong
-                >Adaptive Multigrid Finite State Projection for the
-                Reaction-Diffusion Master Equation.</strong
-              ></a
+          <p class="project-links">
+            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"
+              >GitHub</a
             >
-            Boulder, Colorado.
           </p>
         </div>
       </section>
@@ -209,7 +195,7 @@
             Aditya Dendukuri, Shivkumar Chandrasekaran, and Linda Petzold.
             <strong>Under review</strong> at
             <em>SIAM Journal on Scientific Computing</em>, 2026.
-            <a href="assets/adjoint-krylov-parameter-inference.pdf">Preprint</a>
+            <a href="https://arxiv.org/abs/2610.15940">Preprint</a>
           </li>
           <li>
             <strong
@@ -219,7 +205,7 @@
             Aditya Dendukuri and Linda Petzold.
             <strong>Under review</strong> at
             <em>SIAM Journal on Applied Dynamical Systems</em>, 2026.
-            <a href="assets/koopman-cme-parameter-inference.pdf">Preprint</a>
+            <a href="https://arxiv.org/abs/2610.15937">Preprint</a>
           </li>
         </ol>
         <h3>Publications</h3>
@@ -281,30 +267,89 @@
         </ol>
       </section>
 
-      <section id="software">
-        <h2>Software and teaching</h2>
+      <section id="talks">
+        <h2>Talks and service</h2>
+        <div class="item">
+          <h3>SIAM Annual Meeting 2026</h3>
+          <p>
+            <a
+              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
+              ><strong
+                >Data-Driven Rate Recovery and Sensitivity Analysis for Discrete
+                Stochastic Chemical Reaction Systems.</strong
+              ></a
+            >
+            Cleveland, Ohio.
+          </p>
+          <p>
+            <strong>Session chair.</strong>
+            <a
+              href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397"
+              >CP17: Stochastic Systems</a
+            >.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Colorado Conference for Iterative and Multigrid Methods 2026</h3>
+          <p>
+            <a
+              href="https://easychair.org/smart-program/CCIMM26/2026-06-25.html#talk:312975"
+              ><strong
+                >Adaptive Multigrid Finite State Projection for the
+                Reaction-Diffusion Master Equation.</strong
+              ></a
+            >
+            Boulder, Colorado.
+          </p>
+        </div>
+      </section>
+
+      <section id="past-research">
+        <h2>Past research</h2>
+
+        <div class="item ucsb">
+          <h4>Firing sequences in human brain organoids</h4>
+          <p>
+            I analyzed spontaneous activity in human brain organoids with
+            time-series and reduced-order methods to identify firing sequences
+            that recur across space and time. Their presence without sensory
+            input suggests the sequences are set by circuit structure formed
+            during development.
+            <em>Nature Neuroscience</em>, 2026.
+            <a href="https://doi.org/10.1038/s41593-025-02111-0">Paper</a>
+          </p>
+        </div>
+
+        <div class="item uark">
+          <h4>Learning coordinates for thermodynamically small systems</h4>
+          <p>
+            I studied how to identify useful low-dimensional variables for small
+            molecular systems from Monte Carlo data. Diffusion maps,
+            autoencoders, and neural networks revealed a two-dimensional
+            description of three-particle Lennard-Jones clusters and guided the
+            choice of simple geometric coordinates.
+            <a href="https://doi.org/10.1016/j.compchemeng.2020.106989"
+              >Paper</a
+            >
+          </p>
+        </div>
+
+        <div class="item uca">
+          <h4>Real-time fluid and heat simulation for virtual surgery</h4>
+          <p>
+            I worked on a real-time physical simulation for ViRCAST, a virtual
+            trainer for arthroscopic surgery. We used smoothed particle
+            hydrodynamics to model irrigation flow and heat transfer in a single
+            framework, then parallelized the solver with OpenMP for interactive
+            performance.
+            <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
         <ul class="resources">
-          <li>
-            <a href="https://adityadendukuri.github.io/numerics/"
-              ><strong>numerics</strong></a
-            >
-            <span>C++20 numerical kernels and solvers.</span>
-          </li>
-          <li>
-            <a href="https://github.com/AdityaDendukuri/markovkit"
-              ><strong>markovkit</strong></a
-            >
-            <span
-              >C++20 tools for Markov processes, FSP, and subnetwork
-              elimination.</span
-            >
-          </li>
-          <li>
-            <a href="https://github.com/AdityaDendukuri/approxchol-cpp"
-              ><strong>approxchol</strong></a
-            >
-            <span>Approximate Cholesky factorization for SDD M-matrices.</span>
-          </li>
           <li>
             <a
               href="https://adityadendukuri.github.io/Scientific-Computing-Notes/"
