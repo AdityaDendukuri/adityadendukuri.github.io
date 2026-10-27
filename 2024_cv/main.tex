@@ -10,6 +10,8 @@
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{fancyhdr}
+\usepackage{needspace}
+\hypersetup{hidelinks}
 \usepackage[backend=bibtex,style=ieee]{biblatex}
 \bibliography{../_bibliography/papers}
 \DeclareFieldFormat[article,inproceedings,misc]{title}{\mkbibbold{#1}}
@@ -36,22 +38,27 @@
 \begin{center}
     \textbf{\LARGE Aditya Dendukuri}\\[2pt]
     PhD Candidate \\ University of California, Santa Barbara\\[6pt]
-    \href{mailto:dendukuri.aditya123@outlook.com}{dendukuri.aditya123@outlook.com} \\ 
-    \href{https://adityadendukuri.github.io/}{adityadendukuri.github.io} 
+    \href{mailto:dendukuri.aditya123@outlook.com}{dendukuri.aditya123@outlook.com} \quad
+    \href{https://adityadendukuri.github.io/}{adityadendukuri.github.io} \quad
+    \href{https://github.com/AdityaDendukuri}{github.com/AdityaDendukuri}
 \end{center}
 
 % Research Interests Section
 \section*{Research Interests}
 \noindent
-Numerical analysis, mathematical modeling and scientific machine learning. 
+Numerical linear algebra and scientific computing: sparse and structured direct solvers, factorization
+reuse, Krylov methods and matrix functions, and randomized preconditioners, with applications to the
+simulation of and inference for large Markov chains and stochastic reaction networks. I develop these
+methods as both analysis and open-source C++ and Julia software.
 
 % Education Section
 \section*{Education}
 \noindent
 \textbf{University of California, Santa Barbara CA}\hfill Sept 2021 | Present\\
 PhD in Computer Science \hfill \\
-Advisor: Linda R. Petzold 
-%\textit{Expected Graduation: Winter 2027}
+Advisor: Linda R. Petzold\\
+Coursework: Matrix Analysis and Computation, Numerical Simulation, Finite Element Methods, Level Set
+Methods, Spectral Graph Theory
 
 \noindent\\
 \textbf{University of Arkansas, Fayetteville AR} \hfill Aug 2018 | Jul 2020\\
@@ -66,69 +73,76 @@ Advisor: Tansel Halic \\
 
 
 
-\section*{Experience}
+\section*{Research and Engineering Experience}
 
 \noindent
 \textbf{Lawrence Berkeley National Laboratory} \hfill Berkeley, CA\\
-\textit{UC Graduate Student Researcher (GSR) Intern} \hfill July 2026 -- present
+\textit{UC Graduate Student Researcher (GSR) Intern} \hfill July 2026 -- Present\\
+Applied Mathematics and Computational Research Division
 \begin{itemize}
-    \item Develop efficient approximation methods for stochastic processes, particularly continuous-time Markov chains arising in chemical kinetics and reaction networks.
-    \item Collaborate with scientists in the Applied Mathematics and Computational Research Division on computational methods in advanced mathematics and machine learning.
+    \item Develop algorithms that accelerate simulation of large continuous-time Markov chains by
+          eliminating sparse subnetworks through Schur complements and first-exit distributions.
+    \item Implemented block-tridiagonal LU and block Cholesky factorizations that refactor only from
+          the first changed block, reusing earlier factorizations across subnetworks.
+    \item Use Woodbury updates of retained inverses, and AC2 approximate Cholesky as the preconditioner
+          for randomized inverse-diagonal estimates that select states to eliminate.
+    \item Develop randomized algorithms that sample directly from triangular factors of structured
+          M-matrices.
+\end{itemize}
+
+\noindent
+\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
+\textit{Graduate Research Assistant, advised by Linda R. Petzold} \hfill Sept 2021 -- Present
+\begin{itemize}
+    \item Flux-preserving adaptive finite state projection for multiscale stochastic reaction networks
+          (accepted, \textit{SIAM Multiscale Modeling \& Simulation}).
+    \item Multigrid finite state projection for spatially resolved reaction networks, in which coarse
+          models guide refinement (Copper Mountain Conference on Multigrid Methods, 2026).
+    \item Adjoint Krylov gradients for parameter inference in affine families of linear evolution
+          equations, sharing Krylov bases across large operator libraries (submitted, \textit{SISC}).
+    \item Koopman operator inference of reaction rates without forming the chemical master equation
+          (submitted, \textit{SIAM Journal on Applied Dynamical Systems}).
+    \item Time-series and reduced-order analysis of firing sequences in human brain organoids
+          (\textit{Nature Neuroscience}, 2026).
 \end{itemize}
 
 \noindent
 \textbf{NSF National Center for Atmospheric Research (NCAR)} \hfill Boulder, CO\\
 \textit{SIParCS Graduate Student Intern} \hfill May 2024 -- July 2024
 \begin{itemize}
-    \item Contributed to translating a radiative transfer codebase from Fortran to C++ and prepared documentation to support maintainability and future development.
-    \item Implemented a custom solver for tridiagonal linear systems and benchmarked it against LAPACKE to evaluate numerical accuracy and performance.
-    \item Extended testing coverage for critical linear algebra components using Google Test and added performance benchmarks with Google Benchmark.
+    \item Ported parts of the TUV-x radiative transfer code from Fortran to modern C++.
+    \item Implemented the C++ tridiagonal (Thomas) solver used by the Delta-Eddington solver and
+          benchmarked it against LAPACKE; added Google Test and Google Benchmark coverage.
 \end{itemize}
 
+\needspace{4\baselineskip}
 \noindent
 \textbf{University of Arkansas} \hfill Fayetteville, AR\\
 \textit{Research Associate} \hfill Sept 2020 -- June 2021
 \begin{itemize}
-    \item Modeled nucleation and phase-transition processes using Monte Carlo simulations and implemented custom C code to analyze critical-cluster formation dynamics.
+    \item Wrote performant pure-C code for Monte Carlo nucleation studies and critical-cluster analysis.
 \end{itemize}
 
-\section*{Academic Research}
-
-\noindent
-\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
-\textit{Graduate Research Assistant} \hfill Sept 2021 -- Present
-\begin{itemize}
-    \item Develop numerical methods for simulation and parameter inference in large-scale dynamical systems, with an emphasis on sparse linear algebra, matrix functions, and Markov chains.
-    \item Analyze activity in human brain organoids using time-series and reduced-order methods to identify reproducible dynamics across space and time.
-\end{itemize}
-
+\needspace{4\baselineskip}
 \noindent
 \textbf{University of Arkansas} \hfill Fayetteville, AR\\
 \textit{Graduate Research Assistant} \hfill Aug 2018 -- July 2020
 \begin{itemize}
-    \item Explored the thermodynamic properties of colloidal clusters using data-driven methods, reconstructing energy landscapes and transition pathways from stochastic simulations.
-    \item Simulated quantum circuits to investigate hybrid quantum-classical learning models and developed workflows for evaluating variational quantum algorithms.
-    \item Published results on data-driven thermodynamics in \textit{Computers \& Chemical Engineering}.
+    \item Data-driven thermodynamics of small particle clusters: reconstructed energy landscapes and
+          transition pathways from stochastic simulations (\textit{Computers \& Chemical Engineering}).
+    \item Simulated quantum circuits to study hybrid quantum-classical learning models.
 \end{itemize}
 
+\needspace{4\baselineskip}
 \noindent
 \textbf{University of Central Arkansas} \hfill Conway, AR\\
 \textit{Undergraduate Research Assistant} \hfill Aug 2016 -- May 2018
 \begin{itemize}
-    \item Developed real-time surgical training simulations by coupling fluid-flow and heat-transfer models in a numerical solver.
-    \item Conducted hierarchical task analysis using observational data from arthroscopic surgeries to inform system design and evaluation.
-    \item Presented and published this work at the 23rd IEEE International Conference on Bioinformatics and Bioengineering.
+    \item Real-time surgical training simulation coupling fluid-flow and heat-transfer models
+          (IEEE BIBE).
 \end{itemize}
 
-\section*{Teaching Assistantships}
-
-\noindent
-\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
-\textit{Graduate Teaching Assistant} \hfill Sept 2021 -- Present
-\begin{itemize}
-    \item Supported undergraduate instruction in scientific computing, data structures, and numerical methods, including programming in Python, C++, and MATLAB.
-\end{itemize}
-\section*{Preprints (Under Review/ In Press)}
+\section*{Preprints (Under Review / In Press)}
 \noindent
 \begin{itemize}
     \item \fullcite{dendukuri2026adjointkrylov}
@@ -149,6 +163,26 @@ Advisor: Tansel Halic \\
     \item \fullcite{demirel2017hierarchical}
 \end{itemize}
 
+% Software Section
+\section*{Software}
+\begin{itemize}
+    \item \textbf{numerics} -- C++20 numerical linear algebra library (sole developer): dense, banded and
+          sparse factorizations, Krylov solvers, matrix exponentials, Woodbury factorization reuse and
+          mixed-precision LU; optional BLAS, LAPACK, OpenMP, SuiteSparse and FFTW back ends and
+          hand-written CUDA kernels; C++20 concepts for operator properties; Google Test and Google
+          Benchmark suites. \href{https://adityadendukuri.github.io/numerics/}{Documentation},
+          \href{https://github.com/AdityaDendukuri/numerics}{GitHub}.
+    \item \textbf{markovkit} -- C++20 library for continuous-time Markov chains: adaptive and Krylov finite
+          state projection, stochastic simulation, multigrid-preconditioned reaction-diffusion solvers,
+          and subnetwork elimination.
+          \href{https://adityadendukuri.github.io/numerics/markovkit/}{Documentation},
+          \href{https://github.com/AdityaDendukuri/markovkit}{GitHub}.
+    \item \textbf{AdjointKrylovGradients} -- Julia implementation and reproducibility code for the adjoint
+          Krylov gradient paper. \href{https://github.com/AdityaDendukuri/AdjointKrylovGradients}{GitHub}.
+    \item \textbf{approxchol} -- Header-only C++20 randomized approximate Cholesky for graph Laplacians,
+          under 200 lines. \href{https://github.com/AdityaDendukuri/approxchol}{GitHub}.
+\end{itemize}
+
 % Conferences Section
 \section*{Conference Presentations}
 \begin{itemize}
@@ -162,8 +196,10 @@ Advisor: Tansel Halic \\
     \item \fullcite{aas}
 \end{itemize}
 
-\section*{Professional Service}
+\section*{Teaching and Service}
 \begin{itemize}
+    \item Graduate Teaching Assistant, UCSB (2021 -- Present): scientific computing, numerical methods,
+          and data structures (C++, Python, MATLAB).
     \item Session chair, \href{https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397}{CP17: Stochastic Systems}, SIAM Annual Meeting, Cleveland, OH, 2026.
 \end{itemize}
 
@@ -176,31 +212,15 @@ Advisor: Tansel Halic \\
     \item Advancement of Undergraduate Research in the Sciences (AURS) summer research fund (2016) (\url{http://www.aursfund.org}) Award Amount: \$5000
 \end{itemize}
 
-% Selected Courses Section
-\section*{Selected Courses}
-\begin{tabularx}{1\textwidth}{
->{\raggedright\arraybackslash}X
->{\raggedright\arraybackslash}X}
-\textbf{PhD Courses (UCSB)}& \textbf{MS Courses (UofA)}\\
-\begin{itemize}
-    \item Matrix Analysis and Computation
-    \item Level Set Methods
-    \item Finite Element Methods
-    \item Numerical Simulation
-    \item Spectral Graph Theory
-\end{itemize}
-& \begin{itemize}
-    \item Deep Learning
-    \item Natural Language Processing
-    \item Computer Vision
-\end{itemize}\\
-\end{tabularx}
-
 % Skills Section
-\section*{Skills (2-3 Years of Full-Time Experience)}
+\section*{Technical Skills}
 \begin{itemize}
-    \item \textbf{Programming:} Julia, Python, C/C++
-    \item \textbf{Software:} Tensorflow and PyTorch (Python), Modelling Toolkit (Julia), SciML (Julia), Linux, CMAKE.
+    \item \textbf{Programming:} C++ (C++17/20, templates, concepts), C, CUDA, Julia, Python
+    \item \textbf{Numerical linear algebra:} sparse direct factorizations, Schur complements, factorization
+          reuse, Krylov methods and preconditioning, randomized approximate Cholesky, matrix functions
+    \item \textbf{High-performance computing:} OpenMP, CUDA, cache blocking, vectorization, benchmarking
+    \item \textbf{Libraries and tools:} BLAS, LAPACK, SuiteSparse, FFTW, CMake, Google Test, Google Benchmark,
+          Git, Linux; PyTorch, SciML (Julia)
 \end{itemize}
 
 % References Section
