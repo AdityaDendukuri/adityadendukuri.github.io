@@ -44,14 +44,17 @@ abstract = {Thermodynamically small systems, with a number N of interacting part
       url={https://arxiv.org/abs/2504.03070},
 }
 
-@misc{dendukuri2025fluxpreservingadaptivefinitestate,
-      title={Flux-Preserving Adaptive Finite State Projection for Multiscale Stochastic Reaction Networks},
-      author={Aditya Dendukuri and Shivkumar Chandrasekaran and Linda Petzold},
-      year={2025},
-      eprint={2512.17064},
-      archivePrefix={arXiv},
-      primaryClass={cs.CE},
-      url={https://arxiv.org/abs/2512.17064},
+@article{dendukuri2025fluxpreservingadaptivefinitestate,
+  author = {Dendukuri, Aditya and Chandrasekaran, Shivkumar and Petzold, Linda},
+  title = {Flux-Preserving Adaptive Finite State Projection for Multiscale Stochastic Reaction Networks},
+  journal = {Multiscale Modeling \& Simulation},
+  volume = {24},
+  number = {4},
+  pages = {1664--1696},
+  year = {2026},
+  doi = {10.1137/25M1823623},
+  url = {https://doi.org/10.1137/25M1823623},
+  abstract = {The finite state projection (FSP) method approximates the chemical master equation by restricting the dynamics to a finite subset of the (typically infinite) state space, enabling direct numerical solution with computable error bounds. Adaptive variants update this subset in time, but multiscale systems with widely separated reaction rates remain challenging, as low-probability bottleneck states can carry essential probability flux and the dynamics alternate between fast transients and slowly evolving stiff regimes. We propose a flux-based adaptive FSP method that uses probability flux to drive both state-space pruning and time-step selection. The pruning rule protects low-probability states with large outgoing flux, preserving connectivity in bottleneck systems, while the time-step rule adapts to the instantaneous total flux to handle rate constants spanning several orders of magnitude. Numerical experiments on stiff, oscillatory, and bottleneck reaction networks show that the method maintains accuracy while using substantially smaller state spaces.}
 }
 @article{van_der_molen_preconfigured_2026,
 	title = {Preconfigured neuronal firing sequences in human brain organoids},
