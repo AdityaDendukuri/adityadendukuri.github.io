@@ -1,237 +1,204 @@
-% Document class and font size
-\documentclass[a4paper,9pt]{extarticle}
-
-% Packages
-\usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\geometry{letterpaper, margin=0.75in}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{tabularx}
-\usepackage{fancyhdr}
-\usepackage{needspace}
-\hypersetup{hidelinks}
-\usepackage[backend=bibtex,style=ieee]{biblatex}
-\bibliography{../_bibliography/papers}
-\DeclareFieldFormat[article,inproceedings,misc]{title}{\mkbibbold{#1}}
-
-% Formatting
-\setlist{noitemsep}
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
-
-\newcommand\mycite[1]{\AtNextCite{\defcounter{maxnames}{1}}\citeauthor{#1}, \citeyear{#1}}
-
-% Begin document
-\begin{document}
-
-% Disable page numbers
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{microtype,enumitem,titlesec,fancyhdr,needspace}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\hypersetup{pdftitle={Aditya Dendukuri - Curriculum Vitae},pdfauthor={Aditya Dendukuri}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=1.25em,itemsep=2pt,parsep=0pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=5pt,parsep=0pt,topsep=3pt}
 \pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Aditya Dendukuri}
+\fancyhead[R]{Curriculum Vitae}
+\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\fancyhead{}
-\fancyhead[L]{\textit{Aditya Dendukuri}}
-\fancyhead[R]{\textit{PhD Candidate at UCSB}}
-\thispagestyle{empty}
+\setlength{\headheight}{14pt}
+\raggedbottom
+\newcommand{\entry}[4]{\Needspace{4\baselineskip}\textbf{#1}\hfill #2\\\textit{#3}\hfill #4\par}
+\newcommand{\me}{\textbf{A. Dendukuri}}
+\begin{document}
+\thispagestyle{plain}
+{\LARGE\bfseries Aditya Dendukuri}\par
+PhD Candidate in Computer Science, University of California, Santa Barbara\\
+\href{mailto:aditya_dendukuri@ucsb.edu}{aditya\_dendukuri@ucsb.edu}\quad
+\href{https://adityadendukuri.github.io/}{adityadendukuri.github.io}\quad
+\href{https://github.com/AdityaDendukuri}{GitHub}
 
-% Header
-\begin{center}
-    \textbf{\LARGE Aditya Dendukuri}\\[2pt]
-    PhD Candidate \\ University of California, Santa Barbara\\[6pt]
-    \href{mailto:dendukuri.aditya123@outlook.com}{dendukuri.aditya123@outlook.com} \quad
-    \href{https://adityadendukuri.github.io/}{adityadendukuri.github.io} \quad
-    \href{https://github.com/AdityaDendukuri}{github.com/AdityaDendukuri}
-\end{center}
-
-% Research Interests Section
 \section*{Research Interests}
-\noindent
-Numerical linear algebra and scientific computing, with applications to the simulation of and
-inference for large Markov chains and stochastic reaction networks.
+Numerical analysis and scientific computing, with an emphasis on multigrid, Krylov methods, and
+randomized numerical linear algebra. Applications to stochastic dynamical systems, inverse problems,
+and scientific machine learning.
 
-% Education Section
 \section*{Education}
-\noindent
-\textbf{University of California, Santa Barbara CA}\hfill Sept 2021 | Present\\
-PhD in Computer Science \hfill \\
-Advisor: Linda R. Petzold\\
-Coursework: Matrix Analysis and Computation, Numerical Simulation, Finite Element Methods, Level Set
-Methods, Spectral Graph Theory
+\textbf{University of California, Santa Barbara}\hfill Sept. 2021 -- Present\\
+PhD in Computer Science, expected spring 2027. Advisor: Linda R. Petzold.
 
-\noindent\\
-\textbf{University of Arkansas, Fayetteville AR} \hfill Aug 2018 | Jul 2020\\
-MS in Computer Science \\
-Advisors: David M. Ford and Matthew J. Patitz \\
-Thesis: Nonlinear Dimensionality Reduction for the Thermodynamics of Small Clusters of Particles
+\textbf{University of Arkansas, Fayetteville}\hfill Aug. 2018 -- July 2020\\
+MS in Computer Science. Advisors: David M. Ford and Matthew J. Patitz.\\
+Thesis: \textit{Nonlinear Dimensionality Reduction for the Thermodynamics of Small Clusters of Particles}.
 
-\noindent\\
-\textbf{University of Central Arkansas, Conway AR} \hfill Aug 2014 | May 2018\\
-BS in Computer Science (Minor in Physics)\\
-Advisor: Tansel Halic \\
+\textbf{University of Central Arkansas}\hfill Aug. 2014 -- May 2018\\
+BS in Computer Science, minor in Physics. Advisor: Tansel Halic.
 
-
-
-\section*{Research and Engineering Experience}
-
-\noindent
-\textbf{Lawrence Berkeley National Laboratory} \hfill Berkeley, CA\\
-\textit{UC Graduate Student Researcher (GSR) Intern} \hfill July 2026 -- Present\\
-Applied Mathematics and Computational Research Division
+\section*{Research Experience}
+\entry{University of California, Santa Barbara}{Santa Barbara, CA}
+{Graduate Research Assistant; advisor: Linda R. Petzold}{Sept. 2021 -- Present}
 \begin{itemize}
-    \item Develop algorithms that accelerate simulation of large continuous-time Markov chains by
-          eliminating sparse subnetworks through Schur complements and first-exit distributions.
-    \item Implemented block-tridiagonal LU and block Cholesky factorizations that refactor only from
-          the first changed block, reusing earlier factorizations across subnetworks.
-    \item Use Woodbury updates of retained inverses, and AC2 approximate Cholesky as the preconditioner
-          for randomized inverse-diagonal estimates that select states to eliminate.
-    \item Develop randomized algorithms that sample directly from triangular factors of structured
-          M-matrices.
+\item Developed an adaptive method for stiff chemical master equations that uses probability flux to
+select molecular states and time steps. Derived bounds for the errors introduced by truncation and
+numerical propagation. Published in \textit{Multiscale Modeling \& Simulation} (2026).
+\item Constructed multigrid transfer operators and coarse equations for the reaction--diffusion
+master equation. Analyzed the error introduced by coarsening and computed transient distributions
+with up to 7.16 million states.
+\item Developed adjoint Krylov methods that reuse forward and adjoint approximations to compute
+derivatives with respect to many unknown coefficients. Applied the methods to chemical master
+equations, Kuramoto--Sivashinsky dynamics, and Lindblad equations.
+\item Analyzed the bias introduced by projection in Koopman operator inference. Recovered ten
+reaction rates from a $15\times15$ operator for a model with more than 146 million molecular states.
+\item Contributed analyses of time series and reduced models for neuronal firing sequences in human
+brain organoids (\textit{Nature Neuroscience}, 2026).
 \end{itemize}
 
-\noindent
-\textbf{University of California, Santa Barbara} \hfill Santa Barbara, CA\\
-\textit{Graduate Research Assistant, advised by Linda R. Petzold} \hfill Sept 2021 -- Present
+\entry{Lawrence Berkeley National Laboratory}{Berkeley, CA}
+{UC Graduate Student Researcher Intern; mentor: Mark Fornace}{July -- September 2026}
 \begin{itemize}
-    \item Flux-preserving adaptive finite state projection for multiscale stochastic reaction networks
-          (\textit{SIAM Multiscale Modeling \& Simulation}, 2026).
-    \item Multigrid finite state projection for spatially resolved reaction networks, in which coarse
-          models guide refinement (Copper Mountain Conference on Multigrid Methods, 2026).
-    \item Adjoint Krylov gradients for parameter inference in affine families of linear evolution
-          equations, sharing Krylov bases across large operator libraries (submitted, \textit{SISC}).
-    \item Koopman operator inference of reaction rates without forming the chemical master equation
-          (submitted, \textit{SIAM Journal on Applied Dynamical Systems}).
-    \item Time-series and reduced-order analysis of firing sequences in human brain organoids
-          (\textit{Nature Neuroscience}, 2026).
+\item Developed methods that accelerate the simulation of continuous-time Markov chains by replacing
+repeated transitions within a subnetwork with a calculation of where the process exits.
+\item Implemented subnetwork sweeping in C++, using sparse factorizations and estimates of occupation
+times to guide the calculation. A public release is planned.
 \end{itemize}
 
-\noindent
-\textbf{NSF National Center for Atmospheric Research (NCAR)} \hfill Boulder, CO\\
-\textit{SIParCS Graduate Student Intern} \hfill May 2024 -- July 2024
+\entry{NSF National Center for Atmospheric Research}{Boulder, CO}
+{SIParCS Graduate Student Intern}{May -- July 2024}
 \begin{itemize}
-    \item Ported parts of the TUV-x radiative transfer code from Fortran to modern C++.
-    \item Implemented the C++ tridiagonal (Thomas) solver used by the Delta-Eddington solver and
-          benchmarked it against LAPACKE; added Google Test and Google Benchmark coverage.
+\item Developed C++ components of the TUV-x radiative-transfer code, including a tridiagonal solver.
+Compared the solver with LAPACKE and added numerical tests and performance benchmarks.
 \end{itemize}
 
-\needspace{4\baselineskip}
-\noindent
-\textbf{University of Arkansas} \hfill Fayetteville, AR\\
-\textit{Research Associate} \hfill Sept 2020 -- June 2021
+\Needspace{6\baselineskip}
+\textbf{University of Arkansas}\hfill Fayetteville, AR\\
+\textit{Research Associate}\hfill Sept. 2020 -- June 2021\\
+\textit{Graduate Research Assistant}\hfill Aug. 2018 -- July 2020\par
+Developed Monte Carlo software in C for nucleation studies. Used diffusion maps and neural networks
+to identify reduced variables for the thermodynamics of small particle systems. Also studied quantum learning models.
+
+\entry{University of Central Arkansas}{Conway, AR}
+{Undergraduate Research Assistant}{Aug. 2016 -- May 2018}
+Developed fluid-flow and heat-transfer models for real-time surgical training simulation.
+
+\section*{Publications and Preprints}
+\textbf{Published}
+\begin{enumerate}
+\item \me, S. Chandrasekaran, and L. R. Petzold.
+\textbf{Flux-Preserving Adaptive Finite State Projection for Multiscale Stochastic Reaction Networks.}
+\textit{Multiscale Modeling \& Simulation} 24(4), 1664--1696 (2026).
+\href{https://doi.org/10.1137/25M1823623}{doi:10.1137/25M1823623}.
+\item T. van der Molen et al.
+\textbf{Preconfigured neuronal firing sequences in human brain organoids.}
+\textit{Nature Neuroscience} 29, 123--135 (2026).
+\href{https://doi.org/10.1038/s41593-025-02111-0}{doi:10.1038/s41593-025-02111-0}.
+\item \me, M. Tunc, D. Demirel, S. Kockara, and T. Halic.
+\textbf{Unified Framework for Real-Time Fluid Simulation in Virtual Rotator Cuff Arthroscopic Skill Trainer (ViRCAST).}
+\textit{IEEE BIBE}, 346--353 (2023).
+\href{https://doi.org/10.1109/BIBE60311.2023.00063}{doi:10.1109/BIBE60311.2023.00063}.
+\textbf{Best Paper Award.}
+\item D. M. Ford, \me, G. Kalyoncu, K. Luu, and M. J. Patitz.
+\textbf{Machine learning to identify variables in thermodynamically small systems.}
+\textit{Computers \& Chemical Engineering} 141, 106989 (2020).
+\href{https://doi.org/10.1016/j.compchemeng.2020.106989}{doi:10.1016/j.compchemeng.2020.106989}.
+\item D. Demirel, A. Yu, S. Cooper-Baer, \me, T. Halic, S. Kockara, N. Kockara, and S. Ahmadi.
+\textbf{A hierarchical task analysis of shoulder arthroscopy for a virtual arthroscopic tear diagnosis and evaluation platform (VATDEP).}
+\textit{International Journal of Medical Robotics and Computer Assisted Surgery} 13(3), e1799 (2017).
+\href{https://doi.org/10.1002/rcs.1799}{doi:10.1002/rcs.1799}.
+\end{enumerate}
+
+\Needspace{5\baselineskip}
+\textbf{Under review}
+\begin{enumerate}[resume]
+\item \me, S. Chandrasekaran, and L. R. Petzold.
+\textbf{An Adjoint Krylov Approach to Parameter Inference for Affine Families of Linear Evolution Equations.}
+Under review, \textit{SIAM Journal on Scientific Computing} (2026).
+\href{https://doi.org/10.48550/arXiv.2610.15940}{doi:10.48550/arXiv.2610.15940}.
+\item \me\ and L. R. Petzold.
+\textbf{Koopman Operator Inference for the Chemical Master Equation.}
+Under review, \textit{SIAM Journal on Applied Dynamical Systems} (2026).
+\href{https://doi.org/10.48550/arXiv.2610.15937}{doi:10.48550/arXiv.2610.15937}.
+\item \me\ and L. Petzold.
+\textbf{A Multigrid Finite State Projection Algorithm for the Solution of the Reaction-Diffusion Master Equation.}
+Under review, \textit{SIAM Journal on Scientific Computing},
+Iterative and Multigrid Special Section (2026).
+\end{enumerate}
+
+\Needspace{5\baselineskip}
+\textbf{Manuscripts in preparation}
 \begin{itemize}
-    \item Wrote performant pure-C code for Monte Carlo nucleation studies and critical-cluster analysis.
+\item \me\ and M. Fornace.
+\textbf{Subnetwork sweeping for continuous-time Markov chains on discrete state spaces.}
 \end{itemize}
 
-\needspace{4\baselineskip}
-\noindent
-\textbf{University of Arkansas} \hfill Fayetteville, AR\\
-\textit{Graduate Research Assistant} \hfill Aug 2018 -- July 2020
+\newpage
+\section*{Teaching Experience}
+\textbf{University of California, Santa Barbara}\hfill Sept. 2021 -- Present\\
+\textit{Graduate Teaching Assistant}
 \begin{itemize}
-    \item Reconstructed energy landscapes and transition pathways of small particle clusters from
-          stochastic simulations with data-driven methods (\textit{Computers \& Chemical Engineering}).
-    \item Simulated quantum circuits to study hybrid quantum-classical learning models.
+\item Extensive teaching assistant experience in CS111, \textit{Introduction to Computational
+Science}. The course covers numerical algorithms and the use of mathematical software in scientific
+computation.
+\item Additional teaching assistant experience in discrete mathematics. Teaching experience also
+includes numerical methods and data structures, using C++, Python, and MATLAB.
 \end{itemize}
 
-\needspace{4\baselineskip}
-\noindent
-\textbf{University of Central Arkansas} \hfill Conway, AR\\
-\textit{Undergraduate Research Assistant} \hfill Aug 2016 -- May 2018
-\begin{itemize}
-    \item Real-time surgical training simulation coupling fluid-flow and heat-transfer models
-          (IEEE BIBE).
-\end{itemize}
+\section*{Teaching Materials}
+\href{https://adityadendukuri.github.io/Scientific-Computing-Notes/}{\textbf{Scientific Computing notes}}.
+Public notes that began as a study guide for CS111 and developed into a working reference.
+The notes connect definitions and proofs to numerical examples, algorithms, and exercises.
+Topics include numerical linear algebra, interpolation and quadrature, iterative solvers,
+ordinary differential equations, and applications to stochastic systems and inference.
 
-\section*{Preprints (Under Review)}
-\noindent
-\begin{itemize}
-    \item \fullcite{dendukuri2026adjointkrylov}
-    \item \fullcite{dendukuri2026koopmancme}
-\end{itemize}
-
-% Publications Section
-\section*{Publications}
-\noindent
-\begin{itemize}
-    \item \fullcite{dendukuri2025fluxpreservingadaptivefinitestate}
-    \item \fullcite{van_der_molen_preconfigured_2026}    
-    \item \fullcite{10431871}
-    \item \fullcite{FORD2020106989}
-    \item \fullcite{demirel2017hierarchical}
-\end{itemize}
-
-% Software Section
 \section*{Software}
 \begin{itemize}
-    \item \textbf{numerics} -- C++20 numerical linear algebra library, developed solely by me, with dense,
-          banded and sparse factorizations, Krylov solvers, matrix exponentials, Woodbury factorization
-          reuse and mixed-precision LU. It has optional BLAS, LAPACK, OpenMP, SuiteSparse and FFTW back
-          ends, hand-written CUDA kernels, C++20 concepts for operator properties, and Google Test and
-          Google Benchmark suites. \href{https://adityadendukuri.github.io/numerics/}{Documentation},
-          \href{https://github.com/AdityaDendukuri/numerics}{GitHub}.
-    \item \textbf{markovkit} -- C++20 library for continuous-time Markov chains with adaptive and Krylov
-          finite state projection, stochastic simulation, multigrid-preconditioned reaction-diffusion solvers,
-          and subnetwork elimination.
-          \href{https://adityadendukuri.github.io/numerics/markovkit/}{Documentation},
-          \href{https://github.com/AdityaDendukuri/markovkit}{GitHub}.
-    \item \textbf{AdjointKrylovGradients} -- Julia implementation and reproducibility code for the adjoint
-          Krylov gradient paper. \href{https://github.com/AdityaDendukuri/AdjointKrylovGradients}{GitHub}.
-    \item \textbf{approxchol} -- Header-only C++20 randomized approximate Cholesky for graph Laplacians,
-          under 200 lines. \href{https://github.com/AdityaDendukuri/approxchol}{GitHub}.
+\item \href{https://github.com/AdityaDendukuri/numerics}{\textbf{numerics}}.
+C++20 library for scientific computing, including sparse and structured factorizations, Krylov
+methods, and matrix functions. Supports reuse of factorizations and LU factorization in mixed
+precision, with numerical tests and performance benchmarks.
+\item \href{https://github.com/AdityaDendukuri/markovkit}{\textbf{MarkovKit}}.
+C++20 library implementing adaptive finite state projection, stochastic simulation,
+and multigrid solvers for spatial reaction systems.
+\item \href{https://github.com/AdityaDendukuri/AdjointKrylovGradients}{\textbf{AdjointKrylovGradients}}.
+Julia package for computing gradients through adjoint Krylov approximations. An \texttt{rrule}
+interface allows the method to be used in automatic differentiation. Includes code for reproducing
+the numerical experiments.
+\item \href{https://github.com/AdityaDendukuri/approxchol}{\textbf{approxchol}}.
+Header-only C++ implementation of randomized approximate Cholesky factorization for graph Laplacians.
 \end{itemize}
 
-% Conferences Section
-\section*{Conference Presentations}
+\section*{Selected Conference Presentations}
 \begin{itemize}
-    \item \textbf{Data-Driven Rate Recovery and Sensitivity Analysis for Discrete Stochastic Chemical Reaction Systems.} SIAM Annual Meeting, Cleveland, OH, 2026.
-    \item \fullcite{rdme_boulder}
-    \item \fullcite{dendukurip:bibe}
-    \item \fullcite{siam}
-    \item \fullcite{fopam}
-    \item \fullcite{qtml}
-    \item \fullcite{inbre}
-    \item \fullcite{aas}
+\item \textbf{Data-Driven Rate Recovery and Sensitivity Analysis for Discrete Stochastic Chemical Reaction Systems.}
+SIAM Annual Meeting, Cleveland, OH (2026).
+\item \textbf{Adaptive Multigrid Finite State Projection for the Reaction-Diffusion Master Equation.}
+Colorado Conference for Iterative and Multigrid Methods, Boulder, CO (2026).
+\item \textbf{Detecting Subspaces for Small Lennard-Jones Clusters Using Spectral Graph Theory and Machine Learning.}
+SIAM Conference on Computational Science and Engineering (2021).
 \end{itemize}
 
-\section*{Teaching and Service}
-\begin{itemize}
-    \item Graduate Teaching Assistant at UCSB (2021 -- Present) for scientific computing, numerical
-          methods, and data structures (C++, Python, MATLAB).
-    \item Session chair, \href{https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89397}{CP17: Stochastic Systems}, SIAM Annual Meeting, Cleveland, OH, 2026.
-\end{itemize}
+\section*{Professional Service}
+Session chair, CP17: Stochastic Systems, SIAM Annual Meeting, Cleveland, OH (2026).
 
-% Honors Section
 \section*{Honors}
-\begin{itemize}[leftmargin=*]
-    \item Best paper award. IEEE Bioinformatics and Bioengineering (BIBE) Conference 2023. 
-    \item Masters thesis nominated for the \textit{Conference of Southern Graduate Schools (CSGS)} outstanding master's thesis award.
-    \item Graduate Student Council Travel Grant (\$500) for the Foundations of Process Analytics and Machine Learning Conference in Raleigh, North Carolina (Summer 2019).
-    \item Advancement of Undergraduate Research in the Sciences (AURS) summer research fund (2016) (\url{http://www.aursfund.org}) Award Amount: \$5000
-\end{itemize}
-
-% Skills Section
-\section*{Technical Skills}
 \begin{itemize}
-    \item \textbf{Programming:} C++ (C++17/20, templates, concepts), C, CUDA, Julia, Python
-    \item \textbf{Numerical linear algebra:} sparse direct factorizations, Schur complements, factorization
-          reuse, Krylov methods and preconditioning, randomized approximate Cholesky, matrix functions
-    \item \textbf{High-performance computing:} OpenMP, CUDA, cache blocking, vectorization, benchmarking
-    \item \textbf{Libraries and tools:} BLAS, LAPACK, SuiteSparse, FFTW, CMake, Google Test, Google Benchmark,
-          Git, Linux; PyTorch, SciML (Julia)
+\item Best Paper Award, IEEE Bioinformatics and Bioengineering Conference (2023).
+\item Master's thesis nominated for the Conference of Southern Graduate Schools Outstanding
+Master's Thesis Award.
+\item Graduate Student Council Travel Grant, FOPAM (2019); Advancement of Undergraduate Research
+in the Sciences research funding (2016).
 \end{itemize}
-
-% References Section
-\section*{References} 
-\textbf{}
-\textbf{Dr. Linda R. Petzold} (petzold@engineering.ucsb.edu)\\
-Mehrabian Distinguished Professor, Mechanical Engineering and Computer Science, University of California, Santa Barbara.  
-\vspace{4pt}\\
-\textbf{Jian Sun} (sunjian@ucar.edu)\\
-Soft Eng/Prog II, NSF National Center for Atmospheric Research
-\vspace{4pt}\\
-\textbf{Dr. David Ford} (ford3dm@cmich.edu) \\
-Dean, Bagley College of Engineering, Mississippi State University.\\
-Past: Professor and Department Head. Ralph E. Martin Department of Chemical Engineering, University of Arkansas. 
-\vspace{4pt}\\
-\textbf{Dr. Tansel Halic} (tanselhalic@gmail.com) \\
-Senior Software Engineer, Intuitive Surgical.
 
 \end{document}
