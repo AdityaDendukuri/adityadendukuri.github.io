@@ -41,9 +41,8 @@
             Laboratory.
           </p>
           <p>
-            I also build open-source C++ software that carries these methods
-            into practice, from low-level numerical kernels to complete solvers
-            for stochastic reaction networks.
+            I also maintain a few open-source software packages, including a
+            numerical simulation library that I mostly use for my own work.
           </p>
           <p class="links">
             <a href="mailto:aditya_dendukuri@ucsb.edu">Email</a>
@@ -65,8 +64,8 @@
           <h4>Flux-preserving adaptive finite state projection</h4>
           <p>
             An adaptive method for multiscale stochastic reaction networks. It
-            uses probability flux to retain transient pathways that
-            density-based pruning can miss.
+            keeps states with high probability flux, which density-based
+            pruning can drop.
             Published in
             <em>Multiscale Modeling &amp; Simulation</em> 24(4), 2026.
             <a href="https://doi.org/10.1137/25M1823623">Paper</a>
@@ -76,10 +75,12 @@
           <h4>Multigrid finite state projection</h4>
           <p>
             A multilevel finite state projection method for spatially resolved
-            reaction networks. Coarse models guide refinement so that fine
-            resolution is used only where it is needed. Presented at the 2026
-            Copper Mountain Conference on Multigrid Methods. Paper in
-            preparation for a SISC special issue.
+            reaction networks. Coarse models decide where to refine. Presented at the 2026
+            Copper Mountain Conference on Multigrid Methods.
+            <strong>Under review</strong> at
+            <em>SIAM Journal on Scientific Computing</em> (Iterative and
+            Multigrid special section).
+            <a href="https://arxiv.org/abs/2611.19032">Preprint</a>
           </p>
         </div>
 
@@ -137,7 +138,7 @@
             models with multigrid solvers.
           </p>
           <p class="uses">
-            Implements my flux-preserving adaptive FSP and multigrid FSP work.
+            Includes the code for my adaptive FSP and multigrid FSP papers.
           </p>
           <p class="project-links">
             <a href="https://adityadendukuri.github.io/numerics/markovkit/"
@@ -158,7 +159,7 @@
             LAPACK, OpenMP, CUDA, FFTW, and SuiteSparse backends.
           </p>
           <p class="uses">
-            The numerical foundation for markovkit and my research codes.
+            markovkit is built on it.
           </p>
           <p class="project-links">
             <a href="https://adityadendukuri.github.io/numerics/"
@@ -180,8 +181,7 @@
             for chemical master equations, PDEs, and Lindblad generators.
           </p>
           <p class="uses">
-            Code and reproducibility scripts for my adjoint Krylov parameter
-            inference paper.
+            Code and scripts for my adjoint Krylov paper.
           </p>
           <p class="project-links">
             <a href="https://github.com/AdityaDendukuri/AdjointKrylovGradients"
@@ -199,7 +199,7 @@
           </h4>
           <p>
             Header-only randomized approximate Cholesky factorization for graph
-            Laplacians and SDD M-matrices, for use as a fast preconditioner.
+            Laplacians and SDD M-matrices. It can be used as a preconditioner.
           </p>
           <p class="project-links">
             <a href="https://github.com/AdityaDendukuri/approxchol"
@@ -213,6 +213,16 @@
         <h2>Papers</h2>
         <h3>Preprints</h3>
         <ol class="publications">
+          <li>
+            <strong
+              >A Multigrid Finite State Projection Algorithm for the Solution of
+              the Reaction-Diffusion Master Equation.</strong
+            >
+            Aditya Dendukuri and Linda Petzold.
+            <strong>Under review</strong> at
+            <em>SIAM Journal on Scientific Computing</em>, 2026.
+            <a href="https://arxiv.org/abs/2611.19032">Preprint</a>
+          </li>
           <li>
             <strong
               >An Adjoint Krylov Approach to Parameter Inference for Affine
@@ -338,8 +348,8 @@
           <p>
             I analyzed spontaneous activity in human brain organoids with
             time-series and reduced-order methods to identify firing sequences
-            that recur across space and time. Their presence without sensory
-            input suggests the sequences are set by circuit structure formed
+            that recur across space and time. The sequences appear without sensory
+            input, which suggests they come from circuit structure formed
             during development.
             <em>Nature Neuroscience</em>, 2026.
             <a href="https://doi.org/10.1038/s41593-025-02111-0">Paper</a>
@@ -366,8 +376,7 @@
             I worked on a real-time physical simulation for ViRCAST, a virtual
             trainer for arthroscopic surgery. We used smoothed particle
             hydrodynamics to model irrigation flow and heat transfer in a single
-            framework, then parallelized the solver with OpenMP for interactive
-            performance.
+            framework and parallelized the solver with OpenMP.
             <a href="https://doi.org/10.1109/BIBE60311.2023.00063">Paper</a>
           </p>
         </div>
